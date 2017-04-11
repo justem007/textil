@@ -1,0 +1,693 @@
+body {
+  margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+::-moz-selection {
+  background-color: #069;
+  color: #fff;
+}
+
+::selection {
+  background-color: #069;
+  color: #fff;
+}
+
+.rossina-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.rossina-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.rossina-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #64ffda !important;
+  color: black !important;
+}
+
+.rossina-mobile-title {
+  display: none !important;
+}
+
+.rossina-logo-image {
+  height: 40px;
+  width: 165px;
+}
+
+.rossina-header {
+  overflow: visible;
+  background-color: white;
+}
+
+.rossina-header .material-icons {
+  font-size: 1.3em;
+  color: #767777 !important;
+}
+
+.rossina-header .mdl-layout__drawer-button {
+  background: transparent;
+  color: #767777;
+}
+
+.rossina-header .mdl-navigation__link {
+  color: #757575;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.rossina-navigation-container {
+  /* Simple hack to make the overflow happen to the left instead... */
+  direction: rtl;
+  order: 1;
+  width: 500px;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+  width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rossina-navigation {
+  /* ... and now make sure the content is actually LTR */
+  direction: ltr;
+  justify-content: flex-end;
+  width: 900px;
+}
+
+.rossina-search-box.is-focused + .rossina-navigation-container {
+  opacity: 0;
+  width: 150px;
+}
+
+.rossina-navigation .mdl-navigation__link {
+  display: inline-block;
+  height: 60px;
+  line-height: 68px;
+  background-color: transparent !important;
+  border-bottom: 4px solid transparent;
+}
+
+  .rossina-navigation .mdl-navigation__link:hover {
+  border-bottom: 4px solid #069;
+}
+
+.rossina-search-box {
+  order: 2;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.rossina-more-button {
+  order: 3;
+}
+
+
+.rossina-drawer {
+  border-right: none;
+}
+
+.rossina-drawer-separator {
+  height: 1px;
+  background-color: #dcdcdc;
+  margin: 8px 0;
+}
+
+.rossina-drawer .mdl-navigation__link.mdl-navigation__link {
+  font-size: 14px;
+  color: #757575;
+}
+
+.rossina-drawer span.mdl-navigation__link.mdl-navigation__link {
+  color: #069;
+}
+
+.rossina-drawer .mdl-layout-title {
+  position: relative;
+  background: #069;
+  height: 160px;
+}
+
+.rossina-drawer .rossina-logo-image {
+  position: absolute;
+  bottom: 16px;
+}
+
+.rossina-be-together-section {
+  position: relative;
+  height: 500px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('../../images/rossina/Colorful-Triangles-Background-Texture1.jpg') center 30% no-repeat;
+  background-size: cover;
+}
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #767777;
+  font-weight: 500;
+}
+
+.rossina-slogan {
+  font-size: 60px;
+  padding-top: 100px;
+}
+
+.rossina-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.rossina-create-character {
+  font-size: 21px;
+  padding-top: 60px;
+}
+
+  .rossina-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+  }
+
+.rossina-screen-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.rossina-screens {
+  text-align: right;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.rossina-screen {
+  text-align: center;
+}
+
+.rossina-screen .rossina-link {
+  margin-top: 16px;
+  display: block;
+  z-index: 2;
+}
+
+.rossina-image-link {
+  text-decoration: none;
+}
+
+.rossina-wear {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
+}
+
+  .rossina-wear .rossina-screen-image {
+    width: 40%;
+    z-index: 1;
+  }
+
+
+.rossina-phone {
+  display: inline-block;
+  width: 64px;
+  margin-right: 48px;
+}
+
+  .rossina-phone .rossina-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.rossina-tablet {
+  display: inline-block;
+  width: 110px;
+  margin-right: 64px;
+}
+
+  .rossina-tablet .rossina-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .rossina-tablet .rossina-link {
+    display: block;
+    z-index: 2;
+  }
+
+
+.rossina-tv {
+  display: inline-block;
+  width: 300px;
+  margin-right: 80px;
+}
+
+  .rossina-tv .rossina-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.rossina-auto {
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+}
+
+  .rossina-auto .rossina-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+  }
+
+
+.rossina-wear-section {
+  position: relative;
+  background: url('../../images/exemplo/wear.png') center top no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.rossina-wear-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #37474f;
+}
+
+.rossina-wear-band-text {
+  max-width: 800px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
+  color: white;
+}
+
+  .rossina-wear-band-text p {
+    padding-top: 8px;
+  }
+
+.rossina-link {
+  text-decoration: none;
+  color: #069 !important;
+}
+
+  .rossina-link:hover {
+    color: #006699 !important;
+  }
+
+  .rossina-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.rossina-alt-link {
+  text-decoration: none;
+  color: #64ffda !important;
+  font-size: 16px;
+}
+
+  .rossina-alt-link:hover {
+    color: #00bfa5 !important;
+  }
+
+  .rossina-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.rossina-customized-section {
+  text-align: center;
+}
+
+.rossina-customized-section-text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
+  .rossina-customized-section-text p {
+    padding-top: 16px;
+  }
+
+.rossina-customized-section-image {
+  background: url('../../images/exemplo/devices.jpg') center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.rossina-more-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .rossina-more-section .rossina-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+.rossina-card-container {
+}
+
+  .rossina-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .rossina-card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .rossina-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .rossina-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .rossina-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .rossina-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .rossina-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.rossina-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+  .rossina-footer a:hover {
+    color: #8bc34a;
+  }
+
+  .rossina-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .rossina-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .rossina-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .rossina-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .rossina-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.rossina-link-menu:hover {
+  cursor: pointer;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .rossina-navigation-container {
+    display: none;
+  }
+
+  .rossina-title {
+    display: none !important;
+  }
+
+  .rossina-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .rossina.rossina-search-box.is-focused ~ .rossina-mobile-title,
+  .rossina-search-box.is-focused + .rossina-navigation-container + .rossina-mobile-title {
+    opacity: 0;
+  }
+
+  .rossina-more-button {
+    display: none;
+  }
+
+  .rossina-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .rossina-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .rossina-be-together-section {
+    height: 300px;
+  }
+
+  .rossina-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .rossina-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .rossina-create-character {
+    padding-top: 200px;
+    font-size: 16px;
+  }
+
+  .rossina-create-character img {
+    height: 12px;
+  }
+
+  .rossina-fab {
+    display: none;
+  }
+
+  .rossina-wear-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .rossina-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
+
+.icons-blue{
+  color: cornflowerblue;
+}
+
+.largura-imagem{
+  width: 30px;
+}
+
+#view-source {
+  position: fixed;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900;
+}
+
+.rossina-h1{
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 1.1;
+  color: #fff;
+  margin-top: -10px;
+}
+
+.rossina-h2{
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 200;
+  font-size: 1.2em;
+  line-height: 1.1;
+  color: #000;
+  margin-top: -10px;
+}
+
+.rossina-h3{
+  margin-bottom: 0.7rem;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1.2em;
+  line-height: 1.1;
+  color: #000;
+  margin-top: 10px;
+}
+
+.rossina-icon-g{
+  font-size: 3em;
+  height: 30px;
+  color: #fff;
+}
+
+.rossina-title-span{
+    /*background: #069;*/
+    /*opacity: 0.5;*/
+    /*filter: alpha(opacity=50);*/
+    padding: 10px;
+    width: 300px;
+    color: #ede7f6;
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.4em;
+    /*border-radius: 8px 0;*/
+    /*-moz-border-radius: 8px 0;*/
+}
+
+.rossina-link-p a{
+    padding: 20px;
+}
+
+.rossina-title-span-footer{
+    background: inherit;
+    padding: 10px 0;
+    width: 300px;
+    color: #3E4EB8;
+    font-weight: 200;
+    font-size: 1.4em;
+}
+
+.rossina-icons-footer{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.rossina-tecido-utilizacao span{
+  font-size: 1.2em;
+  color: #069;
+}
+
+.rossina-h2-tecido{
+  margin-bottom: 0.8rem;
+  font-family: inherit;
+  font-weight: 200;
+  font-size: 2em;
+  line-height: 1.1;
+  color: #3c3c3c;
+}
+
+.rossina-span-tecido{
+  margin-bottom: 0.8rem;
+  font-family: inherit;
+  font-weight: 200;
+  font-size: 1.6em;
+  line-height: 1.1;
+  color: #3c3c3c;
+}
+
+.rossina-h2-camisa{
+  margin-bottom: 0.8rem;
+  font-family: inherit;
+  font-weight: 200;
+  font-size: 1.5em;
+  line-height: 1.1;
+  color: #3c3c3c;
+}
+
+.rossina-span-etiqueta{
+  margin-bottom: 0.8rem;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+.mockup-canvas{
+  width: 270px;
+  height: 300px;
+  float: left;
+  background: url('../../images/rossina/camisa/Camiseta-basica-branca-reforco-no-ombro-frente.jpg') center top no-repeat;
+  /*border: solid 1px #CCC;*/
+}
+
+.mockup-canvas-tecidos{
+  width: 355px;
+  height: 450px;
+  float: left;
+  /*background: url('../../images/rossina/camisa/Camiseta-basica-branca-reforco-no-ombro-frente.jpg') center top no-repeat;*/
+  border: solid 1px #CCC;
+}
+
+.painel-controle{
+  float: left;
+  width: 500px;
+  height: 300px;
+  border: solid 1px #CCC;
+  overflow: scroll;
+}
+
+.painel-controle-2{
+  float: right;
+  height: 450px;
+  padding: 20px;
+  /*border: solid 1px #CCC;*/
+  /*overflow: auto;*/
+  overflow-x: auto;
+}
+
+.rossina-title-funciona{
+  margin-bottom: 0.8rem;
+  font-family: inherit;
+  font-weight: 200;
+  font-size: 1.7em;
+  line-height: 1.1;
+  color: #3c3c3c;
+}
+
+.rossina-table{
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+  color: #3C3C3C;
+}
+
+.color_link_1 a{
+  color: black;
+}

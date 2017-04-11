@@ -1,0 +1,186 @@
+@extends('plataforma.main.main.main')
+
+@section('title', 'Rossina Estamparia Digital')
+
+@section('content')
+
+    {{--aqui está o arquivo do header--}}
+    @include('plataforma.partial.header.header')
+
+    <div class="rossina-content mdl-layout__content">
+        <!-- FORM STARTS HERE -->
+        <form method="POST" action="/ducks" id="editForm" novalidate>
+            {{ csrf_field() }}
+            <div class="form-group @if ($errors->has('name')) has-error @endif">
+                <label for="name">Nome</label>
+                <input type="text" id="name" class="form-control" name="name" value="{{ Illuminate\Support\Facades\Input::old('name') }}">
+                <span class="help-block text-info">Favor colocar seu nome corretamente</span>
+                <br>
+                @if ($errors->has('name')) <p class="alert alert-dismissible alert-danger">
+                    {{ $errors->first('name') }}
+                </p> @endif
+            </div>
+
+            <div class="form-group @if ($errors->has('email')) has-error @endif">
+                <label for="email">Email</label>
+                <input type="text" id="email" class="form-control" name="email"  value="{{ Illuminate\Support\Facades\Input::old('email') }}">
+                <span class="help-block text-info">Por favor, colocar um email válido</span>
+                <br>
+                @if ($errors->has('email')) <p class="alert alert-dismissible alert-danger">{{ $errors->first('email') }}</p> @endif
+            </div>
+
+            <div class="form-group @if ($errors->has('password')) has-error @endif">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" name="password">
+                <span class="help-block text-info">colocar uma senha entre 6 e 15 caracteris</span>
+                @if ($errors->has('password')) <p class="alert alert-dismissible alert-danger">{{ $errors->first('password') }}</p> @endif
+            </div>
+
+            <div class="form-group @if ($errors->has('password_confirm')) has-error @endif">
+                <label for="password_confirm">Confirme Password</label>
+                <input type="password" id="password_confirm" class="form-control" name="password_confirm">
+                <span class="help-block text-info">repita a senha de cima</span>
+                @if ($errors->has('password_confirm')) <p class="alert alert-dismissible alert-danger">{{ $errors->first('password_confirm') }}</p> @endif
+                <br>
+            </div>
+
+            <button type="submit" class="btn btn-success">Testar Validação</button>
+
+        </form>
+        <a name="top"></a>
+        <div class="rossina-more-section">
+            <div class="rossina-section-title mdl-typography--display-1-color-contrast text-center">O que você procura ?</div>
+            <div class="rossina-card-container mdl-grid">
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="{{asset('images/rossina/maquinas-v2.jpg')}}">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text text-center">Serviços</h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <span class="mdl-typography--font-light mdl-typography--subhead">
+                        <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Sublimação. </p>
+                        <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Silk digital (DTG). </p>
+                        <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Filme de recorte termocolante. </p>
+                        <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Reprodução de arte final de estampas. </p>
+                        <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Transferência sublimática em calandra ou prensa. </p>
+                    <p class="mdl-typography--subhead" style="font-family: Times New Roman, Times, serif">
+                        Trabalhe focado no que você sabe fazer de melhor : criar, produzir ou vender e terceirize conosco sua produção.
+                    </p>
+                    <p class="mdl-typography--subhead" style="font-family: Times New Roman, Times, serif">
+                        EXPERIÊNCIA-PONTUALIDADE
+                    </p>
+                        </span>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="rossina-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                            Saiba mais
+                            <i class="material-icons">chevron_right</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="{{asset('images/rossina/administracion-logistica.gif')}}">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Web-Logística</h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <span class="mdl-typography--font-light mdl-typography--subhead">
+                        <p class="mdl-typography--font-light mdl-typography--subhead" style="font-family: Times New Roman, Times, serif">
+                        Cadastre-se agora produção limitada ! <br><br>
+                        O Revendedor vende nossos PRODUTOS que temos estoque em seu e-commerce. Para o produto camisetas a Rossina recebe o pedido,
+                        imprime sob demanda e posta no Correios para o cliente do Revendedor. Para PRODUTOS PRONTOS o cliente vai revender o que estiver já estampado.<br>
+                        Venha conhecer nossa estrutura e converse direto com o Rossina, conheça nossa equipe e veja como é fácil iniciar o seu novo negócio diminuindo custos terceirizando a sua produção.
+                    </p>
+                        </span>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="rossina-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                            saiba mais
+                            <i class="material-icons">chevron_right</i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="{{asset('images/rossina/crepe-de-chine.jpg')}}">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Tecidos</h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p class="mdl-typography--font-light mdl-typography--subhead">
+                            <i class="material-icons icons-blue">done</i>
+                            Impressão Digital em Tecidos de Poliéster ou Misturas.
+                        </p>
+                        <p class="mdl-typography--font-light mdl-typography--subhead">
+                            <i class="material-icons icons-blue">done</i>
+                            Metro corrido (rolos).
+                        </p>
+                        <p class="mdl-typography--font-light mdl-typography--subhead">
+                            <i class="material-icons icons-blue">done</i>
+                            Desenhos com padronagem ou Full print.
+                        </p>
+                        <p class="mdl-typography--font-light mdl-typography--subhead">
+                            <i class="material-icons icons-blue">done</i>
+                            Temos dois padrões até 1,50m de largura e acima até 1,76m sem limite de metragem.
+                        </p>
+                        <p class="mdl-typography--font-light mdl-typography--subhead">
+                            <i class="material-icons icons-blue">done</i>
+                            Produção mínima 10 metros lineares.
+                        </p>
+                        <p class="mdl-typography--font-light mdl-typography--subhead">
+                            <i class="material-icons icons-blue">done</i>
+                            Peças Costuradas (Full Print ou localizada).
+                        </p>
+                        <p class="mdl-typography--font-light mdl-typography--subhead">
+                            <i class="material-icons icons-blue">done</i>
+                            Peças Cortadas
+                        </p>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="rossina-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                            saiba mais
+                            <i class="material-icons">chevron_right</i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="{{asset('images/rossina/Camiseta-basica-branca-reforco-no-ombro-frente.jpg')}}" class="largura-imagem">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Produtos</h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <span class="mdl-typography--font-light mdl-typography--subhead">
+                            <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Papel sublimático estampado em rolo.</p>
+                            <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Banners, faixas e painéis em qualquer tamanho.</p>
+                            <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Camisas (básicas, raglan manga curta, gola v, baby look...).</p>
+                            <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Cangas.</p>
+                            <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Lenços. </p>
+                            <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Echarpes.</p>
+                            <p class="mdl-typography--font-light mdl-typography--subhead"><i class="material-icons icons-blue">done</i>Capas de almofadas.</p>
+                    <p class="mdl-typography--font-light mdl-typography--subhead"  style="font-family: Times New Roman, Times, serif">
+                        Venha desenvolver o seu produto conosco, e entregue diretamente para o seu cliente
+                    </p>
+                        </span>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="rossina-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                            saiba mais
+                            <i class="material-icons">chevron_right</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{--aqui está o arquivo do footer--}}
+        @include('plataforma.partial.footer.footer')
+    </div>
+@endsection

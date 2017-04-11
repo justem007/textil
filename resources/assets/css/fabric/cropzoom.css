@@ -1,0 +1,17 @@
+body {
+    font: 11pt Arial, Helvetica;
+}
+
+#canvasContainer {
+    background-image: url(data:image/gif;base64,R0lGODlhCgAKAIAAAOLi4v///yH5BAAHAP8ALAAAAAAKAAoAAAIRhB2ZhxoM3GMSykqd1VltzxQAOw==);
+    display: inline-block;
+    border: 2px solid #ccc;
+}
+
+.key>span {
+    background: #428bca;
+    border-radius: 3px;
+    color: white;
+    font-size: 9pt;
+    padding: 2px;
+}
