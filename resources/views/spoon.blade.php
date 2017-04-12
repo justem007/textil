@@ -11,7 +11,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,900,300italic,400italic,900italic&subset=latin,latin-ext'
         rel='stylesheet' type='text/css'>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="assets/css/rossina.css">
+        <link rel="stylesheet" type="text/css" href="css/rossina.css">
         <style>
             #imagem{border: 3px solid #CCC;} 
             #imagem:hover{border:2px solid lightseagreen;} 

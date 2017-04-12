@@ -1,16 +1,4 @@
 {
-  "/js/fullcalendar/fullcalendar-pt-br.js": "/js/fullcalendar/fullcalendar-pt-br.js",
-  "/js/fullcalendar/fullcalendar.js": "/js/fullcalendar/fullcalendar.js",
-  "/js/moment/moment.js": "/js/moment/moment.js",
-  "/js/moment/moment-pt-br.js": "/js/moment/moment-pt-br.js",
   "/js/app.js": "/js/app.js",
-  "/assets/css/bootstrap.css": "/assets/css/bootstrap.css",
-  "/js/dist/fabric.js": "/js/dist/fabric.js",
-  "/js/rossina.js": "/js/rossina.js",
-  "/js/dist/jquery.js": "/js/dist/jquery.js",
-  "/js/site/bootstrap.js": "/js/site/bootstrap.js",
-  "/js/site/tether.js": "/js/site/tether.js",
-  "/js/site/jquery.js": "/js/site/jquery.js",
-  "/js/pinit_main.js": "/js/pinit_main.js",
-  "/js/pinit.js": "/js/pinit.js"
+  "/assets/css/bootstrap.css": "/assets/css/bootstrap.css"
 }

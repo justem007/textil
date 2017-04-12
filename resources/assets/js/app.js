@@ -18,5 +18,5 @@ Vue.component('leaderboard', require('./components/Leaderboard.vue'));
 Vue.component('outro', require('./components/Outro.vue'));
 
 const app =new Vue({
-    el: '#app, #outro'
+    el: '#app'
 });

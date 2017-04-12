@@ -4,6 +4,7 @@ namespace Textil;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Textil\Notifications\ResetPassword;
 
 class User extends Authenticatable
 {

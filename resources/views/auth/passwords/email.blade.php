@@ -10,56 +10,56 @@
 @extends('app.pages.site.main.main')
 
 @section('container-fluid')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel-default login-panel">
-                <div class="panel-login-name">
-                    <h2 class="text-center">
-                        Resetar Minha Senha
-                        <i class="fa fa-share" aria-hidden="true" style="color: white;"></i>
-                    </h2>
-                </div>
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel-default login-panel">
+                    <div class="panel-login-name">
+                        <h2 class="text-center">
+                            Resetar Minha Senha
+                            <i class="fa fa-share" aria-hidden="true" style="color: white;"></i>
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                        @endif
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('password.email') }}">
-                        {{ csrf_field() }}
+                        <form class="form-horizontal" role="form" method="POST" action="{{ route('password.email') }}">
+                            {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail</label>
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="email" class="col-md-4 control-label">E-Mail</label>
 
-                            <div class="col-md-6">
-                                <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                    </div>
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                                @endif
+                                    @endif
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-success btn3d">
-                                    Enviar link de redefinição de senha
-                                </button>
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-4">
+                                    <button type="submit" class="btn btn-success btn3d">
+                                        Enviar link de redefinição de senha
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @section('footer-section')
     @parent
 
