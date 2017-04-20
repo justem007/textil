@@ -203,6 +203,7 @@ return [
         Spatie\GoogleCalendar\GoogleCalendarServiceProvider::class,
         Spatie\Newsletter\NewsletterServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
     ],
 

@@ -2,11 +2,22 @@
 
 namespace Textil\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image;
+use function time;
+
+//use Validator;
+
+// use Illuminate\Contracts\Validation\Validator;
+
+//use Intervention\Image\Facades\Image;
 
 class ImageController extends Controller
 {
+
     public function index()
     {
         return view('spoon');
@@ -15,6 +26,7 @@ class ImageController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
     public function resizeImagePost(Request $request)
@@ -22,11 +34,11 @@ class ImageController extends Controller
 
         $this->validate($request, [
 //        'title' => 'required|max:50',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1000000000',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1000000'
         ]);
 
         $image = $request->file('image');
-        $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+        $input['imagename'] = time()."-".$image->getClientOriginalExtension();
 
 //        $size = Storage::size;
 

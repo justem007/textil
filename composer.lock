@@ -257,16 +257,16 @@
         },
         {
             "name": "consoletvs/charts",
-            "version": "4.4.5",
+            "version": "4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ConsoleTVs/Charts.git",
-                "reference": "27bf4691fa71aad10602363dc99ab281b1425bf2"
+                "reference": "39b294696a94b49c560a19f088c5f5d12eccd543"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ConsoleTVs/Charts/zipball/27bf4691fa71aad10602363dc99ab281b1425bf2",
-                "reference": "27bf4691fa71aad10602363dc99ab281b1425bf2",
+                "url": "https://api.github.com/repos/ConsoleTVs/Charts/zipball/39b294696a94b49c560a19f088c5f5d12eccd543",
+                "reference": "39b294696a94b49c560a19f088c5f5d12eccd543",
                 "shasum": ""
             },
             "require": {
@@ -291,7 +291,7 @@
                 }
             ],
             "description": "Create charts for laravel using diferent charts libraries",
-            "time": "2017-03-30T10:43:33+00:00"
+            "time": "2017-04-15T10:07:52+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -798,34 +798,46 @@
         },
         {
             "name": "dompdf/dompdf",
-            "version": "v0.7.0-beta",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/dompdf.git",
-                "reference": "ffbfa8b2b38f109a111d3d260a9f30c49a1b3c3e"
+                "reference": "5c98652b1a5beb7e3cc8ec35419b2828dd63ab14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/ffbfa8b2b38f109a111d3d260a9f30c49a1b3c3e",
-                "reference": "ffbfa8b2b38f109a111d3d260a9f30c49a1b3c3e",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/5c98652b1a5beb7e3cc8ec35419b2828dd63ab14",
+                "reference": "5c98652b1a5beb7e3cc8ec35419b2828dd63ab14",
                 "shasum": ""
             },
             "require": {
-                "phenx/php-font-lib": "0.3.*",
+                "ext-dom": "*",
+                "ext-gd": "*",
+                "ext-mbstring": "*",
+                "phenx/php-font-lib": "0.4.*",
+                "phenx/php-svg-lib": "0.1.*",
                 "php": ">=5.3.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Dompdf": "src/"
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.7-dev"
                 }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dompdf\\": "src/"
+                },
+                "classmap": [
+                    "lib/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "LGPL-2.1"
             ],
             "authors": [
                 {
@@ -843,7 +855,7 @@
             ],
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
-            "time": "2015-05-01T14:26:17+00:00"
+            "time": "2016-05-11T00:36:29+00:00"
         },
         {
             "name": "drewm/mailchimp-api",
@@ -2224,16 +2236,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.18",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d15ded55b5e690199393ea93a57edcbae20d1ffc"
+                "reference": "02444b7450350db17a7607c8a52f7268ebdb0dad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d15ded55b5e690199393ea93a57edcbae20d1ffc",
-                "reference": "d15ded55b5e690199393ea93a57edcbae20d1ffc",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/02444b7450350db17a7607c8a52f7268ebdb0dad",
+                "reference": "02444b7450350db17a7607c8a52f7268ebdb0dad",
                 "shasum": ""
             },
             "require": {
@@ -2349,7 +2361,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-04-10T19:27:41+00:00"
+            "time": "2017-04-16T13:33:34+00:00"
         },
         {
             "name": "laravel/passport",
@@ -3181,12 +3193,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/michaeldouglas/laravel-pagseguro.git",
-                "reference": "f0981fbca372f9de3be6d4b14597e645cd2f5492"
+                "reference": "69152ff516bddb35503c150bc66cf83340260c08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/michaeldouglas/laravel-pagseguro/zipball/f0981fbca372f9de3be6d4b14597e645cd2f5492",
-                "reference": "f0981fbca372f9de3be6d4b14597e645cd2f5492",
+                "url": "https://api.github.com/repos/michaeldouglas/laravel-pagseguro/zipball/69152ff516bddb35503c150bc66cf83340260c08",
+                "reference": "69152ff516bddb35503c150bc66cf83340260c08",
                 "shasum": ""
             },
             "require": {
@@ -3227,19 +3239,19 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-12-02T00:34:22+00:00"
+            "time": "2017-04-17T17:46:26+00:00"
         },
         {
             "name": "mockery/mockery",
             "version": "0.9.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/padraic/mockery.git",
+                "url": "https://github.com/mockery/mockery.git",
                 "reference": "6fdb61243844dc924071d3404bb23994ea0b6856"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/6fdb61243844dc924071d3404bb23994ea0b6856",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/6fdb61243844dc924071d3404bb23994ea0b6856",
                 "reference": "6fdb61243844dc924071d3404bb23994ea0b6856",
                 "shasum": ""
             },
@@ -3775,16 +3787,16 @@
         },
         {
             "name": "phenx/php-font-lib",
-            "version": "0.3.1",
+            "version": "0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhenX/php-font-lib.git",
-                "reference": "d13682b7e27d14a6323c441426f3dde1cd86c751"
+                "reference": "b8af0cacdc3cbf1e41a586fcb78f506f4121a088"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhenX/php-font-lib/zipball/d13682b7e27d14a6323c441426f3dde1cd86c751",
-                "reference": "d13682b7e27d14a6323c441426f3dde1cd86c751",
+                "url": "https://api.github.com/repos/PhenX/php-font-lib/zipball/b8af0cacdc3cbf1e41a586fcb78f506f4121a088",
+                "reference": "b8af0cacdc3cbf1e41a586fcb78f506f4121a088",
                 "shasum": ""
             },
             "type": "library",
@@ -3805,7 +3817,41 @@
             ],
             "description": "A library to read, parse, export and make subsets of different types of font files.",
             "homepage": "https://github.com/PhenX/php-font-lib",
-            "time": "2014-03-19T17:15:11+00:00"
+            "time": "2015-05-06T20:02:39+00:00"
+        },
+        {
+            "name": "phenx/php-svg-lib",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhenX/php-svg-lib.git",
+                "reference": "b419766515b3426c6da74b0e29e93d71c4f17099"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/b419766515b3426c6da74b0e29e93d71c4f17099",
+                "reference": "b419766515b3426c6da74b0e29e93d71c4f17099",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Svg\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                }
+            ],
+            "description": "A library to read, parse and export to PDF SVG files.",
+            "homepage": "https://github.com/PhenX/php-svg-lib",
+            "time": "2015-05-06T18:49:49+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -6458,16 +6504,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe"
+                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/5a5a9fc8025a08d8919be87d6884d5a92520cefe",
-                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8e6e04167378abf1ddb4d3522d8755c5fd90d102",
+                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102",
                 "shasum": ""
             },
             "require": {
@@ -6496,7 +6542,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-01-26T22:05:40+00:00"
+            "time": "2017-04-12T18:52:22+00:00"
         },
         {
             "name": "phar-io/manifest",

@@ -15,6 +15,8 @@
 //    return view('welcome');
 //});
 
+use function foo\func;
+
 Route::get('/', function () {
     return view('app.pages.site.main.index');
 });
@@ -80,6 +82,10 @@ Route::get('nao-encontrado', function (){
     return view('app.404.not-found');
 });
 
+Route::get('info', function(){
+    echo phpinfo();
+});
+
 Route::get('crie','ImageController@index');
 Route::post('resizeImagePost', ['as' => 'resizeImagePost', 'uses' => 'ImageController@resizeImagePost']);
 
@@ -111,3 +117,21 @@ Route::get('transform', 'CalendarsController@transform');
 
 Route::middleware('auth')->name('card')->get('/cards/{card}', 'CardeController@show');
 Route::get('/leaderboard', 'CardeController@leaderboard');
+
+Route::get('canvas', function(){
+
+    $img = Image::canvas(300, 200, '#ddd');
+
+    $img->circle(100, 50, 50, function ($draw){
+        $draw->background('#0000ff');
+    });
+
+    return $img;
+});
+
+Route::get('flip', function (){
+    $img = Image::make('uploadcamisa/1492093501.png');
+
+// flip image vertically
+    $img->crop(100, 100, 25, 25);
+});

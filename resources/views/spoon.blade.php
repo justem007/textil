@@ -2,6 +2,7 @@
 <html dir="ltr" lang="pt-BR" xmlns:og="https://ogp.me/ns#">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta property="og:type" content='product' />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -2242,13 +2243,13 @@
                                             if ((image.width < 4) || (image.height < 4)) {
                                                 console.log("Visualização A imagem é inferior a 4")
                                                 previewImage.src =
-                                                    'images/flamingo/flamingo-mirror-4.jpg';
+                                                    '/images/uploadcamisa/{{ Session::get('imageName') }}';
                                             } else if ((image.width > 72) || (image.height > 72)) {
                                                 console.log("Visualizar imagem > de 72")
                                                 highresImage.src =
-                                                    'images/flamingo/flamingo-mirror-4.jpg';
+                                                    '/images/uploadcamisa/{{ Session::get('imageName') }}';
                                                 previewImage.src =
-                                                    'images/flamingo/flamingo-mirror-4.jpg';
+                                                    '/images/uploadcamisa/{{ Session::get('imageName') }}';
                                             } else {
                                                 console.log("4 < vizualização imagem < 72")
                                                 previewImage.src =
@@ -2303,7 +2304,11 @@
                                                 <br/>
                                             </div>
                                             <div class="designer_controls">
-                                                {!! Form::open(array('route' => 'resizeImagePost','enctype' => 'multipart/form-data', 'id' => 'form-import-file')) !!}
+                                                {!! Form::open(array(
+                                                    'route' => 'resizeImagePost',
+                                                    'enctype' => 'multipart/form-data',
+                                                    'id' => 'form-import-file',
+                                                    'files' => true)) !!}
                                                     <strong style="margin-top:5px;">1. Carregar desenho</strong>
                                                 {!! Form::file('image', array('class' => 'image', 'id' => 'form-field-filename')) !!}
                                                     <button type="submit" class="btn btn-primary" style="margin-top:5px;">Enviar Imagem</button>
