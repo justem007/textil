@@ -129,6 +129,10 @@ Route::get('canvas', function(){
     return $img;
 });
 
+Route::get('desenho', function (){
+    return view('fabric.exemplos.desenho');
+});
+
 Route::get('flip', function (){
     $img = Image::make('uploadcamisa/1492093501.png');
 

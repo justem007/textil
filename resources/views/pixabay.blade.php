@@ -21,7 +21,7 @@
     var flickerAPI = "https://pixabay.com/api/?key=4774318-f2aa3d24bc1c83a7f025e8f2b&";
     $.getJSON( flickerAPI, {
       image_type: 'vector',
-      category: "science",
+      category: "photos",
       min_width: true,
       min_height : true,
       format: "json"
@@ -29,7 +29,7 @@
       .done(function( data ) {
         $.each( data.hits, function( i, item ) {
           $( "<img>" ).attr( "src", item.previewURL).appendTo( "#images" );
-          if ( i === 20 ) {
+          if ( i === 50 ) {
             return false;
           }
         });

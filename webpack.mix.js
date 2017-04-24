@@ -30,7 +30,7 @@ mix.copy('node_modules/moment/src/locale/pt-br.js', 'public/js/moment/moment-pt-
 mix.copy('node_modules/fabric/dist/fabric.js', 'public/js/dist/fabric.js');
 
 //compilar scss
-mix.sass('resources/assets/sass/app.scss', 'public/assets/css/bootstrap.css')
+mix.sass('resources/assets/sass/app.scss', 'public/assets/css/bootstrap.css');
 mix.copy('node_modules/font-awesome/fonts/*','public/assets/css/dist/fontawesome/fonts');
 
 //compilar .css
@@ -43,3 +43,21 @@ mix.copy('node_modules/locawebstyle/dist/stylesheets/locastyle.css','public/css/
 mix.copy('node_modules/locawebstyle/dist/stylesheets/fonts/*','public/fonts');
 mix.copy('node_modules/locawebstyle/dist/stylesheets/fonts','public/css/dist/fonts');
 mix.copy('resources/assets/css/app-locaweb.css','public/css/dist/app-locaweb.css');
+
+//assets desenho
+//css
+mix.copy('resources/assets/fabric/css/master.css', 'public/fabric/dist/css/master.css');
+mix.copy('resources/assets/fabric/css/prism.css', 'public/fabric/dist/css/prism.css');
+mix.copy('resources/assets/fabric/css/todos.css', 'public/fabric/dist/css/todos.css');
+//js
+mix.copy('resources/assets/fabric/js/excanvas.js', 'public/fabric/dist/js/excanvas.js');
+mix.copy('resources/assets/fabric/js/fabric.js', 'public/fabric/dist/js/fabric.js');
+mix.copy('resources/assets/fabric/js/Delicious.font.js', 'public/fabric/dist/js/Delicious.font.js');
+mix.copy('resources/assets/fabric/js/jquery.js', 'public/fabric/dist/js/jquery.js');
+mix.copy('resources/assets/fabric/js/bootstrap.js', 'public/fabric/dist/js/bootstrap.js');
+mix.copy('resources/assets/fabric/js/paster.js', 'public/fabric/dist/js/paster.js');
+mix.copy('resources/assets/fabric/js/prism.js', 'public/fabric/dist/js/prism.js');
+mix.copy('resources/assets/fabric/js/font_definitions.js', 'public/fabric/dist/js/font_definitions.js');
+mix.copy('resources/assets/fabric/js/utils.js', 'public/fabric/dist/js/utils.js');
+mix.copy('resources/assets/fabric/js/app_config.js', 'public/fabric/dist/js/app_config.js');
+mix.copy('resources/assets/fabric/js/controller.js', 'public/fabric/dist/js/controller.js');
