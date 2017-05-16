@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.2/fabric.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!--<script src="http://malsup.github.com/jquery.form.js"></script>-->
-    <script src="{{ asset('dist/js/image-size/image-size.js') }}"></script>
+    <script src="{{ asset('impressora/dist/image-size.js') }}"></script>
     <title>New Tecidos</title>
     <script>
         function addHandler() {
@@ -254,7 +254,7 @@
                     {{--<div class="coisa"></div>--}}
                     @if ($message = Session::get('success'))
                         <div class="coisa-7">
-                            <span><img src="images/impressora_cabeca-40.png" height="30" alt=""></span>
+                            <span><img src="{{asset('images/impressora_cabeca-40.png')}}" height="30" alt=""></span>
                         </div>
                     @endif
                     {{--<div class="coisa-col">--}}

@@ -1,21 +1,8 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-
-use function foo\func;
 
 Route::get('/', function () {
     return view('app.pages.site.main.index');
@@ -28,6 +15,9 @@ Route::get('/home', 'HomeController@index');
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Route::get('resizeImageTecidos', 'TecidosController@resizeImage');
+Route::post('resizeImageTecidoPost', ['as' => 'resizeImageTecidoPost', 'uses' => 'TecidosController@resizeImagePost']);
 
 Route::get('tecidos','TecidosController@getIndex');
 Route::get('agendamento', 'CalendarsController@index');
@@ -87,17 +77,18 @@ Route::get('info', function(){
 });
 
 Route::get('crie','ImageController@index');
-Route::post('resizeImagePost', ['as' => 'resizeImagePost', 'uses' => 'ImageController@resizeImagePost']);
+Route::post('resizeImagePost', 'ImageController@resizeImagePost')->name('resizeImagePost');
 
-Route::get('calendario', 'AgendarVisitasController@index');
-Route::get('agendamentos', 'AgendarVisitasController@create');
-Route::post('agendarPost', 'AgendarVisitasController@store');
+//Route::get('calendario', 'AgendarVisitasController@index');
+//Route::get('agendamentos', 'AgendarVisitasController@create');
+//Route::post('agendarPost', 'AgendarVisitasController@store');
+Route::get('agendamentos', 'CalendarsController@index');
 
 Route::get('google1a06754d50be5d0d.html', function() {
     return File::get(public_path() . 'google1a06754d50be5d0d.html');
 });
 
-Route::get('calendar', 'FullCalendarController@index');
+//Route::get('calendar', 'FullCalendarController@index');
 
 Route::get('pixabay', function(){
     return view('pixabay');
@@ -118,24 +109,32 @@ Route::get('transform', 'CalendarsController@transform');
 Route::middleware('auth')->name('card')->get('/cards/{card}', 'CardeController@show');
 Route::get('/leaderboard', 'CardeController@leaderboard');
 
-Route::get('canvas', function(){
-
-    $img = Image::canvas(300, 200, '#ddd');
-
-    $img->circle(100, 50, 50, function ($draw){
-        $draw->background('#0000ff');
-    });
-
-    return $img;
-});
-
 Route::get('desenho', function (){
     return view('fabric.exemplos.desenho');
 });
 
-Route::get('flip', function (){
-    $img = Image::make('uploadcamisa/1492093501.png');
+//Testando a api do Mercado Livre usando mercado pago, criando checkout
+Route::get('mercadopago-checkout', 'MercadoPagoController@mercadoPago');
 
-// flip image vertically
-    $img->crop(100, 100, 25, 25);
+//Teste de api Mercado Livre, Testando a cotação de frete
+Route::get('mercadoenvio-frete', function(){
+    return view('mercadoenvio');
+});
+
+//Teste de api do Pagseguro, criando checkout
+Route::get('pagseguro-checkout','PagseguroController@pagseguro')->name('pagseguro.redirect');
+
+//Teste de api Pagseguro, recarga de celular
+Route::get('pagseguro-recarga-celular', 'PagseguroController@recarga');
+
+//Teste de api Pagseguro , vendo as minhas credenciais
+Route::get('credenciais-pagseguro', 'PagseguroController@credencias');
+
+//Teste de api Pagseguro, rota de retorno de notificação
+Route::post('/pagseguro/notification', [
+    'uses' => '\laravel\pagseguro\Platform\Laravel5\NotificationController@notification'
+])->name('pagseguro.notification');
+
+Route::get('fancybox', function(){
+    return view('fancybox');
 });

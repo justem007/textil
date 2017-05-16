@@ -81,56 +81,77 @@
                 Quanto vale seu tempo ? <br>
                 Terceirize Conosco
             </h2>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 box-color" style="border-top: 0;float: left;text-align: center; margin-right: 10px; padding: 5px;font-size: 12px;">
-                        <div style="width: 100%; background-color: #68ceee; height: 50px; margin-top: 90px"> </div>
+            <div class="container">
+                <div class="row" style="margin-bottom: 1px">
+                    <div class="col-md-4 box-color" style="border-top: 0;text-align: center;font-size: 12px;">
+                        <div style="background-color: #FFF">
+                            <div style="width: 100%; background-color: #68ceee; height: 50px; margin-top: 90px"> </div>
                             <div class="box-center">
                                 <div class="flex-box">
-                                    <img src="images/rossina/background/maquinas.jpg" class="img-circle" width="200" height="200">
+                                    <img src="images/rossina/background/maquinas.jpg" class="img-circle" height="200">
+                                </div>
+                            </div>
+                            <p  style="font-size: 34px; font-weight: 200;">
+                                Serviços Têxteis
+                            </p>
+                            <p style="font-size: 14px;  padding: 0 5px 5px 5px; margin-top: 1px; height: 205px;">
+                                Venha conhecer nossa estrutura e converse direto com o Rossina, conheça nossa equipe e veja como é fácil iniciar o seu novo negócio diminuindo custos terceirizando a sua produção.
+                                <br><br>
+                                Trabalhe focado no que você sabe fazer de melhor : criar, produzir ou vender e terceirize conosco sua produção.
+                                <br><br>
+                            </p>
+                            <a href="#" class="btn btn-block btn-primary">Saiba mais</a>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-4 box-color"
+                         style="border-top: 0;text-align: center;font-size: 12px;">
+                        <div style="background-color: #FFF">
+                            <div style="width: 100%; background-color: #68ceee; height: 50px; margin-top: 90px"> </div>
+                            <div class="box-center">
+                                <div class="flex-box">
+                                    <img src="images/rossina/background/rosa.jpg" class="img-circle" width="200" height="200">
+                                </div>
+                            </div>
+                            <p  style="font-size: 34px; font-weight: 200;">
+                                Tecidos Estampados
+                            </p>
+                            <p style="font-size: 14px;  height: 205px; padding: 0 5px 5px 5px;">
+                                Estamparia Digital em Metro Corrido Oferecemos bases de tecidos de poliéster para você imprimir a sua ARTE e produzir vários produtos.
+                                <br><br>
+                                Desenhos com padronagem ou Full print. <br><br>
+                                Temos dois padrões até 1,50m de largura e acima até 1,76m sem limite de metragem. <br><br>
+                                Produção mínima 10 metros lineares
+                            </p>
+                            <a href="#" class="btn btn-block btn-primary">Saiba mais</a>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-md-4 box-color"
+                         style="border-top: 0;text-align: center;font-size: 12px;">
+                        <div style="background-color: #FFF">
+                            <div style="width: 100%; background-color: #68ceee; height: 50px; margin-top: 90px"> </div>
+                            <div class="box-center">
+                                <div class="flex-box">
+                                    <img src="images/rossina/background/coruja-pt.jpg" class="img-circle" width="200" height="200">
                                 </div>
                             </div>
                             <p  style="font-size: 34px; margin-top: 10px; font-weight: 200;">
-                                Serviços Têxteis
+                                Camisas Estampadas
                             </p>
-                            <p style="font-size: 14px; margin-top: 5px; height: 205px; padding: 10px;">
-                                Luxe Certified Customers submit their watches to one of our authorized Luxe Certified Retail Partners. Once inside our retail partner's salon one of their sales associates will assist you in completing the order process. Your timepiece will be insured and shipped to our secure facilities. Upon completion of grading and authentication Luxe certified will send you a copy of the certificate detailing the watch's authenticity, timekeeping accuracy and aesthetic condition.
+                            <p style="font-size: 14px; margin-top: 5px; height: 205px;  padding: 0 5px 5px 5px;">
+                                Camisas lisas para personalização ou customização sob demanda de acordo com suas especificações
+                                Camisas personalizadas masculinas e femininas.
+                                <br><br>
+                                Impressão digital nas posições: frente-costas-mangas no formato máximo 35cm x 45cm em bases claras ou escuras.
+                                <br><br>
+                                Dedique seu tempo em CRIAR e VENDER não desperdice seu capital em estoque, máquinas, espaço físico.
                             </p>
-                        <a href="#" class="btn btn-block btn-primary">Saiba mais</a>
-                    </div>
-                    <div class="col-md-4 box-color" style="border-top: 0;float: left;text-align: center; padding: 1px;font-size: 12px;">
-                        <div style="width: 100%; background-color: #68ceee; height: 50px; margin-top: 90px"> </div>
-                        <div class="box-center">
-                            <div class="flex-box">
-                                <img src="images/rossina/background/rosa.jpg" class="img-circle" width="200" height="200">
-                            </div>
+                            <a href="#" class="btn btn-block btn-primary">Saiba mais</a>
                         </div>
-                        <p  style="font-size: 34px; margin-top: 10px; font-weight: 200;">
-                            Tecidos Estampados
-                        </p>
-                        <p style="font-size: 14px; margin-top: 5px; height: 205px; padding: 10px;">
-                            Luxe Certified Customers submit their watches to one of our authorized Luxe Certified Retail Partners. Once inside our retail partner's salon one of their sales associates will assist you in completing the order process. Your timepiece will be insured and shipped to our secure facilities. Upon completion of grading and authentication Luxe certified will send you a copy of the certificate detailing the watch's authenticity, timekeeping accuracy and aesthetic condition.
-                        </p>
-                        <a href="#" class="btn btn-block btn-primary">Saiba mais</a>
-                    </div>
-                    <div class="col-md-4 box-color" style="border-top: 0;float: right;text-align: center; padding: 5px;font-size: 12px;">
-                        <div style="width: 100%; background-color: #68ceee; height: 50px; margin-top: 90px"> </div>
-                        <div class="box-center">
-                            <div class="flex-box">
-                                <img src="images/rossina/background/coruja-pt.jpg" class="img-circle" width="200" height="200">
-                            </div>
-                        </div>
-                        <p  style="font-size: 34px; margin-top: 10px; font-weight: 200;">
-                            Camisas Estampadas
-                        </p>
-                        <p style="font-size: 14px; margin-top: 5px; height: 205px; padding: 10px;">
-                            Luxe Certified Customers submit their watches to one of our authorized Luxe Certified Retail Partners. Once inside our retail partner's salon one of their sales associates will assist you in completing the order process. Your timepiece will be insured and shipped to our secure facilities. Upon completion of grading and authentication Luxe certified will send you a copy of the certificate detailing the watch's authenticity, timekeeping accuracy and aesthetic condition.
-                        </p>
-                        <a href="#" class="btn btn-block btn-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
-
     </div>
 @section('footer-section')
     @parent

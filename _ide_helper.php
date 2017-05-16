@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.4.19 on 2017-04-20.
+ * Generated for Laravel 5.4.23 on 2017-05-16.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -1354,13 +1354,13 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $command
          * @param array $parameters
-         * @return void 
+         * @return \Illuminate\Foundation\Bus\PendingDispatch 
          * @static 
          */
         public static function queue($command, $parameters = array())
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            \Textil\Console\Kernel::queue($command, $parameters);
+            return \Textil\Console\Kernel::queue($command, $parameters);
         }
         
         /**
@@ -4104,7 +4104,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string|\Closure $listener
          * @param bool $wildcard
-         * @return mixed 
+         * @return \Closure 
          * @static 
          */
         public static function makeListener($listener, $wildcard = false)
@@ -4774,6 +4774,17 @@ namespace Illuminate\Support\Facades {
         public static function forUser($user)
         {
             return \Illuminate\Auth\Access\Gate::forUser($user);
+        }
+        
+        /**
+         * Get all of the defined abilities.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function abilities()
+        {
+            return \Illuminate\Auth\Access\Gate::abilities();
         }
         
     }         
@@ -7049,7 +7060,7 @@ namespace Illuminate\Support\Facades {
          * ("Client-Ip" for instance), configure it via "setTrustedHeaderName()" with
          * the "client-ip" key.
          *
-         * @return string The client IP address
+         * @return string|null The client IP address
          * @see getClientIps()
          * @see http://en.wikipedia.org/wiki/X-Forwarded-For
          * @static 
@@ -7152,7 +7163,7 @@ namespace Illuminate\Support\Facades {
          * If your reverse proxy uses a different header name than "X-Forwarded-Port",
          * configure it via "setTrustedHeaderName()" with the "client-port" key.
          *
-         * @return string 
+         * @return int|string can be a string if fetched from the server bag
          * @static 
          */
         public static function getPort()
@@ -9976,7 +9987,7 @@ namespace Illuminate\Support\Facades {
          * Store the uploaded file on the disk.
          *
          * @param string $path
-         * @param \Illuminate\Http\UploadedFile $file
+         * @param \Illuminate\Http\File|\Illuminate\Http\UploadedFile $file
          * @param array $options
          * @return string|false 
          * @static 
@@ -11454,6 +11465,28 @@ namespace Cagartner\CorreiosConsulta {
          *
          * @static 
          */
+        public static function getTipos()
+        {
+            return \Cagartner\CorreiosConsulta\CorreiosConsulta::getTipos();
+        }
+        
+        /**
+         * 
+         *
+         * @param $valor string
+         * @return string 
+         * @static 
+         */
+        public static function getTipoIndex($valor)
+        {
+            return \Cagartner\CorreiosConsulta\CorreiosConsulta::getTipoIndex($valor);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
         public static function frete($dados, $options = array())
         {
             return \Cagartner\CorreiosConsulta\CorreiosConsulta::frete($dados, $options);
@@ -12073,13 +12106,14 @@ namespace Collective\Html {
          * @param string $name
          * @param array $list
          * @param string $selected
-         * @param array $options
+         * @param array $selectAttributes
+         * @param array $optionsAttributes
          * @return \Illuminate\Support\HtmlString 
          * @static 
          */
-        public static function select($name, $list = array(), $selected = null, $options = array())
+        public static function select($name, $list = array(), $selected = null, $selectAttributes = array(), $optionsAttributes = array())
         {
-            return \Collective\Html\FormBuilder::select($name, $list, $selected, $options);
+            return \Collective\Html\FormBuilder::select($name, $list, $selected, $selectAttributes, $optionsAttributes);
         }
         
         /**
@@ -12135,12 +12169,13 @@ namespace Collective\Html {
          * @param string $display
          * @param string $value
          * @param string $selected
+         * @param array $attributes
          * @return \Illuminate\Support\HtmlString 
          * @static 
          */
-        public static function getSelectOption($display, $value, $selected)
+        public static function getSelectOption($display, $value, $selected, $attributes = array())
         {
-            return \Collective\Html\FormBuilder::getSelectOption($display, $value, $selected);
+            return \Collective\Html\FormBuilder::getSelectOption($display, $value, $selected, $attributes);
         }
         
         /**
@@ -12405,18 +12440,6 @@ namespace Collective\Html {
         public static function entities($value)
         {
             return \Collective\Html\HtmlBuilder::entities($value);
-        }
-        
-        /**
-         * Convert all applicable characters to HTML entities.
-         *
-         * @param string $value
-         * @return string 
-         * @static 
-         */
-        public static function escapeAll($value)
-        {
-            return \Collective\Html\HtmlBuilder::escapeAll($value);
         }
         
         /**
@@ -13465,6 +13488,242 @@ namespace Spatie\GoogleCalendar {
     }         
 }
     
+namespace SantiGraviano\LaravelMercadoPago\Facades {
+
+    class MP {
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function sandbox_mode($enable = null)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::sandbox_mode($enable);
+        }
+        
+        /**
+         * Get Access Token for API use
+         *
+         * @static 
+         */
+        public static function get_access_token()
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::get_access_token();
+        }
+        
+        /**
+         * Get information for specific payment
+         *
+         * @param int $id
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function get_payment($id)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::get_payment($id);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function get_payment_info($id)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::get_payment_info($id);
+        }
+        
+        /**
+         * Get information for specific authorized payment
+         *
+         * @param \SantiGraviano\LaravelMercadoPago\id
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function get_authorized_payment($id)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::get_authorized_payment($id);
+        }
+        
+        /**
+         * Refund accredited payment
+         *
+         * @param int $id
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function refund_payment($id)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::refund_payment($id);
+        }
+        
+        /**
+         * Cancel pending payment
+         *
+         * @param int $id
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function cancel_payment($id)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::cancel_payment($id);
+        }
+        
+        /**
+         * Cancel preapproval payment
+         *
+         * @param int $id
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function cancel_preapproval_payment($id)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::cancel_preapproval_payment($id);
+        }
+        
+        /**
+         * Search payments according to filters, with pagination
+         *
+         * @param array $filters
+         * @param int $offset
+         * @param int $limit
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function search_payment($filters, $offset = 0, $limit = 0)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::search_payment($filters, $offset, $limit);
+        }
+        
+        /**
+         * Create a checkout preference
+         *
+         * @param array $preference
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function create_preference($preference)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::create_preference($preference);
+        }
+        
+        /**
+         * Update a checkout preference
+         *
+         * @param string $id
+         * @param array $preference
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function update_preference($id, $preference)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::update_preference($id, $preference);
+        }
+        
+        /**
+         * Get a checkout preference
+         *
+         * @param string $id
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function get_preference($id)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::get_preference($id);
+        }
+        
+        /**
+         * Create a preapproval payment
+         *
+         * @param array $preapproval_payment
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function create_preapproval_payment($preapproval_payment)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::create_preapproval_payment($preapproval_payment);
+        }
+        
+        /**
+         * Get a preapproval payment
+         *
+         * @param string $id
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function get_preapproval_payment($id)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::get_preapproval_payment($id);
+        }
+        
+        /**
+         * Update a preapproval payment
+         *
+         * @param string $preapproval_payment, $id
+         * @return \SantiGraviano\LaravelMercadoPago\array(json) 
+         * @static 
+         */
+        public static function update_preapproval_payment($id, $preapproval_payment)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::update_preapproval_payment($id, $preapproval_payment);
+        }
+        
+        /**
+         * Generic resource get
+         *
+         * @param \SantiGraviano\LaravelMercadoPago\request
+         * @param \SantiGraviano\LaravelMercadoPago\params  (deprecated)
+         * @param \SantiGraviano\LaravelMercadoPago\authenticate  = true (deprecated)
+         * @static 
+         */
+        public static function get($request, $params = null, $authenticate = true)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::get($request, $params, $authenticate);
+        }
+        
+        /**
+         * Generic resource post
+         *
+         * @param \SantiGraviano\LaravelMercadoPago\request
+         * @param \SantiGraviano\LaravelMercadoPago\data  (deprecated)
+         * @param \SantiGraviano\LaravelMercadoPago\params  (deprecated)
+         * @static 
+         */
+        public static function post($request, $data = null, $params = null)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::post($request, $data, $params);
+        }
+        
+        /**
+         * Generic resource put
+         *
+         * @param \SantiGraviano\LaravelMercadoPago\request
+         * @param \SantiGraviano\LaravelMercadoPago\data  (deprecated)
+         * @param \SantiGraviano\LaravelMercadoPago\params  (deprecated)
+         * @static 
+         */
+        public static function put($request, $data = null, $params = null)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::put($request, $data, $params);
+        }
+        
+        /**
+         * Generic resource delete
+         *
+         * @param \SantiGraviano\LaravelMercadoPago\request
+         * @param \SantiGraviano\LaravelMercadoPago\data  (deprecated)
+         * @param \SantiGraviano\LaravelMercadoPago\params  (deprecated)
+         * @static 
+         */
+        public static function delete($request, $params = null)
+        {
+            return \SantiGraviano\LaravelMercadoPago\MP::delete($request, $params);
+        }
+        
+    }         
+}
+    
 namespace FetchLeo\LaravelXml\Facades {
 
     class Xml {
@@ -13579,6 +13838,18 @@ namespace {
     
     class Eloquent extends \Illuminate\Database\Eloquent\Model {    
         /**
+         * Create and return and un-saved model instance.
+         *
+         * @param array $attributes
+         * @return \Illuminate\Database\Eloquent\Model 
+         * @static 
+         */
+        public static function make($attributes = array())
+        {
+            return \Illuminate\Database\Eloquent\Builder::make($attributes);
+        }
+        
+        /**
          * Register a new global scope.
          *
          * @param string $identifier
@@ -13641,7 +13912,7 @@ namespace {
         /**
          * Add a basic where clause to the query.
          *
-         * @param string|\Closure $column
+         * @param string|array|\Closure $column
          * @param string $operator
          * @param mixed $value
          * @param string $boolean
@@ -15575,6 +15846,8 @@ namespace {
     class Fractal extends \Spatie\Fractal\FractalFacade {}
     
     class GoogleCalendar extends \Spatie\GoogleCalendar\GoogleCalendarFacade {}
+    
+    class MP extends \SantiGraviano\LaravelMercadoPago\Facades\MP {}
     
     class Xml extends \FetchLeo\LaravelXml\Facades\Xml {}
     

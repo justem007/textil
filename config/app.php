@@ -204,6 +204,7 @@ return [
         Spatie\Newsletter\NewsletterServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        SantiGraviano\LaravelMercadoPago\Providers\MercadoPagoServiceProvider::class,
 
     ],
 
@@ -267,6 +268,7 @@ return [
         'Fractal' => Spatie\Fractal\FractalFacade::class,
         'GoogleCalendar' => Spatie\GoogleCalendar\GoogleCalendarFacade::class,
         'Newsletter' => Spatie\Newsletter\NewsletterFacade::class,
+        'MP' => SantiGraviano\LaravelMercadoPago\Facades\MP::class,
 
     ],
 

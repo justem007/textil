@@ -207,9 +207,11 @@ footer {
     font-size: 20px;
 }
 .box-color{
-    background: #FFF;
-    /*margin-left: 7px;*/
-    max-width:420px;
+    /*padding: 15px;*/
+    /*background: #FFF;*/
+    /*margin-left: 0px;*/
+    /*max-width:300px;*/
+    /*border: 1px solid #000;*/
     /*max-width:380px;*/
 }
 

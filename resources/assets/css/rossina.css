@@ -2,28 +2,28 @@
     font-family: 'ParryPro';
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/ParryPro-Normal.woff") format("woff")
+    src: url("/assets/fonts/ParryPro-Normal.woff") format("woff")
 }
 
 @font-face {
     font-family: 'ParryPro';
     font-style: italic;
     font-weight: 400;
-    src: url("/assets/ParryPro-NormalItalic.woff") format("woff")
+    src: url("/assets/fonts/ParryPro-NormalItalic.woff") format("woff")
 }
 
 @font-face {
     font-family: 'ParryPro';
     font-style: normal;
     font-weight: 300;
-    src: url("/assets/ParryPro-Light.woff") format("woff")
+    src: url("/assets/fonts/ParryPro-Light.woff") format("woff")
 }
 
 @font-face {
     font-family: 'ParryPro';
     font-style: italic;
     font-weight: 300;
-    src: url("/assets/ParryPro-LightItalic.woff") format("woff");
+    src: url("/assets/fonts/ParryPro-LightItalic.woff") format("woff");
 }
 
 html {

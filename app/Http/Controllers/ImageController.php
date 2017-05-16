@@ -37,17 +37,17 @@ class ImageController extends Controller
         ]);
 
         $image = $request->file('image');
-        $input['imagename'] = time()."-".$image->getClientOriginalExtension();
+        $input['imagename'] = time().".".$image->getClientOriginalExtension();
 
 //        $size = Storage::size;
 
-        $destinationPath = public_path('images/thumbnailcamisa');
+        $destinationPath = public_path('/thumbnailcamisa');
         $img = Image::make($image->getRealPath());
         $img->resize(100, 100, function ($constraint) {
             $constraint->aspectRatio();
         })->save($destinationPath.'/'.$input['imagename']);
 
-        $destinationPath = public_path('images/uploadcamisa');
+        $destinationPath = public_path('/uploadcamisa');
         $image->move($destinationPath, $input['imagename']);
 
 //        $this->postImage->add($input);

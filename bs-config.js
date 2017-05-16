@@ -20,7 +20,13 @@ module.exports = {
 	},
 	"files": [
 		"public/js/*.js",
-		"public/css/*.css",
+        "public/css/*.css",
+        "public/agendamento/js/*.js",
+        "public/agendamento/css/*.css",
+        "public/assets/css/*.css",
+        "public/assets/js/*.css",
+        "public/fabric/dist/js/*.js",
+        "public/fabric/dist/js/*.js",
 		"resources/views/**/*.php"
 
 	],

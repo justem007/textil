@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-04-20.
+    * Generated on 2017-05-16.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -55,6 +55,7 @@ namespace PHPSTORM_META {
             'googleSearch' instanceof \Spatie\GoogleSearch\GoogleSearch,
             'laravel-fractal' instanceof \Spatie\Fractal\Fractal,
             'Spatie\GoogleCalendar\GoogleCalendar' instanceof \Spatie\GoogleCalendar\GoogleCalendar,
+            'MP' instanceof \SantiGraviano\LaravelMercadoPago\MP,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -197,6 +198,7 @@ namespace PHPSTORM_META {
             'googleSearch' instanceof \Spatie\GoogleSearch\GoogleSearch,
             'laravel-fractal' instanceof \Spatie\Fractal\Fractal,
             'Spatie\GoogleCalendar\GoogleCalendar' instanceof \Spatie\GoogleCalendar\GoogleCalendar,
+            'MP' instanceof \SantiGraviano\LaravelMercadoPago\MP,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -339,6 +341,7 @@ namespace PHPSTORM_META {
             'googleSearch' instanceof \Spatie\GoogleSearch\GoogleSearch,
             'laravel-fractal' instanceof \Spatie\Fractal\Fractal,
             'Spatie\GoogleCalendar\GoogleCalendar' instanceof \Spatie\GoogleCalendar\GoogleCalendar,
+            'MP' instanceof \SantiGraviano\LaravelMercadoPago\MP,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -481,6 +484,7 @@ namespace PHPSTORM_META {
             'googleSearch' instanceof \Spatie\GoogleSearch\GoogleSearch,
             'laravel-fractal' instanceof \Spatie\Fractal\Fractal,
             'Spatie\GoogleCalendar\GoogleCalendar' instanceof \Spatie\GoogleCalendar\GoogleCalendar,
+            'MP' instanceof \SantiGraviano\LaravelMercadoPago\MP,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,

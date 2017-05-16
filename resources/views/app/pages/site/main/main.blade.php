@@ -71,7 +71,7 @@
                         <li class="active"><a href="#">Serviços</a></li>
                         <li><a href="/tecidos">Tecidos</a></li>
                         <li><a href="#contact">Camisas</a></li>
-                        <li><a href="/agendamento">Agendamento</a></li>
+                        <li><a href="/agendamentos">Agendamentos</a></li>
                         <li><a href="#contact">Faqs</a></li>
                         <li><a href="/contatos">Contatos</a></li>
                     </ul>

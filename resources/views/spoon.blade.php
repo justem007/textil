@@ -12,7 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,900,300italic,400italic,900italic&subset=latin,latin-ext'
         rel='stylesheet' type='text/css'>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/rossina.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/rossina.css') }}">
         <style>
             #imagem{border: 3px solid #CCC;} 
             #imagem:hover{border:2px solid lightseagreen;} 
@@ -2243,17 +2243,17 @@
                                             if ((image.width < 4) || (image.height < 4)) {
                                                 console.log("Visualização A imagem é inferior a 4")
                                                 previewImage.src =
-                                                    '/images/uploadcamisa/{{ Session::get('imageName') }}';
+                                                    '/uploadcamisa/{{ Session::get('imageName') }}';
                                             } else if ((image.width > 72) || (image.height > 72)) {
                                                 console.log("Visualizar imagem > de 72")
                                                 highresImage.src =
-                                                    '/images/uploadcamisa/{{ Session::get('imageName') }}';
+                                                    '/uploadcamisa/{{ Session::get('imageName') }}';
                                                 previewImage.src =
-                                                    '/images/uploadcamisa/{{ Session::get('imageName') }}';
+                                                    '/uploadcamisa/{{ Session::get('imageName') }}';
                                             } else {
                                                 console.log("4 < vizualização imagem < 72")
                                                 previewImage.src =
-                                                    '/images/uploadcamisa/{{ Session::get('imageName') }}';
+                                                    '/uploadcamisa/{{ Session::get('imageName') }}';
                                             }
                                         });
                                     </script>

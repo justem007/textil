@@ -1,6 +1,6 @@
 @section('styles-includes')
     @parent
-    <link rel="stylesheet" href="assets/css/fullcalendar/fullcalendar.css">
+    <link rel="stylesheet" href="{{ asset('agendamento/css/fullcalendar.css') }}">
 @endsection
 
 @extends('app.pages.site.main.main')
@@ -12,30 +12,64 @@
 <h1 class="text-center">Calendario de Agendamento</h1>
     <div class="container">
         @forelse($calendar as $calenda)
-            <div class="col-md-6">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <span style="font-weight: 800;">Dados do Visitante</span>
+            <div class="col-md-12">
+            <div class="panel-default login-panel">
+                <div class="panel-login-name">
+                    <h2 class="text-center">
+                        Dados do Visitante
+                        <i class="fa fa-share" aria-hidden="true" style="color: white"></i>
+                    </h2>
                 </div>
                 <div class="panel-body">
-                    <span class="text-info">Nome</span>: {{ $calenda->name }} <br>
-                    <span class="text-info">Tipo de pessoa:</span> {{ $calenda->pessoa->pessoa }} <br>
-                    <span class="text-info">E-mail:</span> {{ $calenda->email }} <br>
-                    <span class="text-info">Telefone:</span> {{ $calenda->phone }} <br>
-                    <span class="text-info">Celular:</span> {{ $calenda->cellphone }} <br>
-                    <span class="text-info">Data do agendamento:</span> {{ $calenda->date }} <br>
-                    <span class="text-info">Horário da visita:</span> {{ $calenda->horario->horario }} <br>
-                    <span class="text-info">Serviços de interesse:</span> {{ $calenda->servicos }} <br>
-                    <span class="text-info">Sua Mensagem:</span> {{ $calenda->message }} <br>
-                    {{ $calendar->links() }}
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="text-info">
+                                <td>Nome</td>
+                                <td>Tipo de pessoa</td>
+                                <td>E-Mail</td>
+                                <td>Telefone</td>
+                                <td>Celular</td>
+                                <td>Data do agendamento</td>
+                                <td>Horário da visita</td>
+                                <td>Serviços de interesse</td>
+                                <td>Mensagem</td>
+                                <td>Ação</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td >{{ $calenda->name }}</td>
+                            <td>{{ $calenda->pessoa->pessoa }}</td>
+                            <td>{{ $calenda->email }}</td>
+                            <td>{{ $calenda->phone }}</td>
+                            <td>{{ $calenda->cellphone }}</td>
+                            <td>{{ $calenda->date }}</td>
+                            <td>{{ $calenda->horario->horario }}</td>
+                            <td>{{ $calenda->servicos }}</td>
+                            <td>{{ $calenda->message }}</td>
+                            <td>
+                                <a href="#">Confirmar</a><br>
+                                <a href="#">Remarcar</a><br>
+                                <a href="#">Excluir</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="10">{{ $calendar->links() }}</td>
+                        </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </div>
             </div>
             @empty
             <p>Não há agendamento</p>
         @endforelse
+
         {{--<h2>{{ dd($calenda->horario) }}</h2>--}}
-        <div class="col-md-6">
+        <div class="col-md-12">
+            <br><br>
             <div class="info" data-dismiss="alert" aria-label="Close"></div>
             <div id='calendar'></div>
         </div>
@@ -53,10 +87,10 @@
 
 @section('javascript-includes')
     @parent
-    <script src="assets/js/moment/moment.js"></script>
-    <script src="assets/js/moment/moment-pt-br.js"></script>
-    <script src="assets/js/fullcalendar/fullcalendar.js"></script>
-    <script src="assets/js/fullcalendar/fullcalendar-pt-br.js"></script>
+    <script src="{{ asset('agendamento/js/moment.js') }}"></script>
+    <script src="{{ asset('agendamento/js/moment-pt-br.js') }}"></script>
+    <script src="{{ asset('agendamento/js/fullcalendar.js') }}"></script>
+    <script src="{{ asset('agendamento/js/fullcalendar-pt-br.js') }}"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         $('#calendar').fullCalendar({

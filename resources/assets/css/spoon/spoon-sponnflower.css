@@ -1,0 +1,156 @@
+.spoonflower_logo {
+  background: url("https://d3u3xhd9tobx8a.cloudfront.net/static/global/logo.svg");
+  background-repeat: no-repeat;
+  background-size: 139px 40px;
+  display: block;
+  height: 40px;
+  margin: 6px 0 3px 54px;
+  text-indent: -1000px\9;
+  width: 139px
+}
+
+@media screen and (min-width: 375px) {
+  .spoonflower_logo {
+    margin-left: 58px
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .spoonflower_logo {
+    background-size: 173px 50px;
+    height: 50px;
+    margin: 12px 0 6px 11px;
+    width: 173px
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .spoonflower_logo {
+    background-size: 193px 55px;
+    height: 55px;
+    margin: 12px 0 6px 11px;
+    width: 193px
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .spoonflower_logo {
+    margin-left: 0
+  }
+}
+
+.spoonflower_definition {
+  margin: 8px;
+  max-width: 270px
+}
+
+@media screen and (min-width: 768px) {
+  .spoonflower_definition {
+    left: 172px;
+    margin-bottom: -8px;
+    position: relative;
+    top: -66px
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .spoonflower_definition {
+    left: 204px;
+    margin-bottom: -38px;
+    top: -98px
+  }
+}
+
+.spoonflower_definition dt {
+  color: #4c8a8c;
+  font-size: 13px;
+  padding: 8px 6px 8px 16px;
+  position: relative;
+  width: 210px
+}
+
+.spoonflower_definition dt::after {
+  content: "";
+  font-family: 'icons';
+  font-size: 8px;
+  position: absolute;
+  right: 22px;
+  top: 16px
+}
+
+.spoonflower_definition dt:hover {
+  color: #154c4c
+}
+
+.spoonflower_definition dt:focus,
+.spoonflower_definition dt:active {
+  color: #154c4c;
+  outline-color: #5f9da4;
+  outline-style: solid;
+  outline-width: 1px
+}
+
+.spoonflower_definition dt span {
+  border-bottom: 1px solid #5f9da4;
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px 4px 1px 0;
+  position: relative;
+  width: 98px
+}
+
+.spoonflower_definition dt.active::after {
+  content: "";
+  font-family: 'icons';
+  font-size: 8px;
+  position: absolute
+}
+
+.spoonflower_definition dd {
+  background-color: #fff;
+  border: 1px solid #efefef;
+  box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.15), 0 4px 4px 0 rgba(0, 0, 0, 0.15), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  font-size: 13px;
+  margin-left: 0;
+  padding: 16px;
+  position: absolute;
+  width: 220px;
+  z-index: 101
+}
+
+@media screen and (min-width: 360px) {
+  .spoonflower_definition dd {
+    margin-left: 0
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .spoonflower_definition dd {
+    font-size: 15px;
+    width: 245px
+  }
+}
+
+.spoonflower_definition ol {
+  margin: 12px 0 0 9px;
+  padding-left: 16px
+}
+
+.spoonflower_definition li {
+  text-align: left
+}
+
+.spoonflower_definition p {
+  margin: 0 0 11px;
+  text-align: left
+}
+
+.spoonflower_definition .btn-primary {
+  margin-right: 3px;
+  padding: 4px 9px;
+  display: inline-block
+}
+
+.spoonflower_definition .btn-primary:last-child {
+  margin-right: 0
+}
