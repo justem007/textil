@@ -16,6 +16,7 @@
         "guzzlehttp/guzzle": "^6.2",
         "imgix/imgix-php": "dev-master",
         "intervention/image": "^2.3",
+        "jamesryanbell/cloudflare": "^1.10",
         "jansenfelipe/cep-gratis": "^3.0",
         "jansenfelipe/cnpj-gratis": "^2.1",
         "jansenfelipe/faker-br": "^1.0",

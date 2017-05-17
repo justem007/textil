@@ -362,9 +362,9 @@
                                 Para incorporar isso, corte e cole o seguinte html em sua página da web:
                                 <p>
                                     <textarea cols="55" rows="6">&lt;a href=&#x27;link&#x27;
-                                        title = &#x27;papu-2-150 by tempj3i7U4H8 on Spoonflower - custom fabric&#x27;&gt;&lt;
-                                        img src=&#x27;images/outros/papu-2-150_shop_preview.png&#x27;
-                                        alt=&#x27;papu-2-150&#x27;/&gt;&lt;/a&gt;
+                                        title = &#x27;colocar alum texto aqui para exemplo&#x27;&gt;&lt;
+                                        img src=&#x27;caminho para a imagem&#x27;
+                                        alt=&#x27;nome da imagem&#x27;/&gt;&lt;/a&gt;
                                     </textarea>
                                 </p>
                             </div>
@@ -389,7 +389,7 @@
                         <div id="fabric_tab" class="substrate_tab selected">
                             <a href="/designs/6087566-papu-2-150?substrate=fabric" data-remote="true">Tecido</a>
                         </div>
-                        <div id="wallpaper_tab" class="substrate_tab ">
+                        <div id="wallpaper_tab" class="substrate_tab">
                             <a href="/designs/6087566-papu-2-150?substrate=wallpaper" data-remote="true">Papel de Parede</a>
                         </div>
                         <div id="gift_wrap_tab" class="substrate_tab">
@@ -402,7 +402,7 @@
                                         if (!window.console) console = {
                                             log: function () {}
                                         };
-                                        console.log('Iniciado o  script')
+                                        console.log('Iniciado o  script');
                                         document.getElementById('project_large').style.display = 'none';
                                         document.getElementById('project_container').style.display = 'none';
                                         document.getElementById('giftwrap_box_view').style.display = 'none';
@@ -423,9 +423,9 @@
                                         var yards = 0;
 
                                         function onKeyUpChangeTotal() {
-                                            var total = document.getElementById("total")
-                                            var discount_message = document.getElementById("discount")
-                                            var yards = document.getElementById('dynamic_fabric_count').value
+                                            var total = document.getElementById("total");
+                                            var discount_message = document.getElementById("discount");
+                                            var yards = document.getElementById('dynamic_fabric_count').value;
                                             var price;
                                             var size;
                                             var fabricId;
@@ -438,11 +438,11 @@
                                             $("input[name*=fabric_size_id]").each(function (index, element) {
                                                 if (element.checked) {
                                                     price_name = "fabric_price_" + element.value + "_" +
-                                                        fabricId
-                                                    size_name = "fabric_size_" + element.value + "_" + fabricId
+                                                        fabricId;
+                                                    size_name = "fabric_size_" + element.value + "_" + fabricId;
                                                     //alert("childnodes 1")
-                                                    price = document.getElementById(price_name).childNodes[0].data
-                                                    size = document.getElementById(size_name).childNodes[0].data
+                                                    price = document.getElementById(price_name).childNodes[0].data;
+                                                    size = document.getElementById(size_name).childNodes[0].data;
                                                     if (element.value == '0') {
                                                         discount = true;
                                                         $("input[name*=dynamic_fabric_yards]").each(function (
@@ -458,27 +458,27 @@
                                                 }
                                             });
                                             if ((isNaN(parseInt(yards))) || (parseInt(yards) == 0)) {
-                                                var cost = 0
+                                                var cost = 0;
                                             } else {
                                                 if (size != "Amostra de teste (8\" x 8\")" && size != "Amostra (8\" x 8\")") {
                                                     var cost = parseFloat(parseFloat(price) * parseInt(yards) * 90) /
-                                                        100
-                                                    var diff = (parseFloat(price) * parseInt(yards)) - cost
-                                                    discount_message.style.display = "block"
+                                                        100;
+                                                    var diff = (parseFloat(price) * parseInt(yards)) - cost;
+                                                    discount_message.style.display = "block";
                                                     discount_message.childNodes[0].data = 'R$' + diff.toFixed(2) +
-                                                        ' economizado com desconto de designer.'
+                                                        ' economizado com desconto de designer.';
                                                 } else {
-                                                    var cost = parseFloat(price) * parseInt(yards)
-                                                    discount_message.style.display = "none"
+                                                    var cost = parseFloat(price) * parseInt(yards);
+                                                    discount_message.style.display = "none";
                                                 }
                                             }
                                             //alert("childnodes 2")
-                                            total.childNodes[0].data = 'Total: R$' + cost.toFixed(2)
+                                            total.childNodes[0].data = 'Total: R$' + cost.toFixed(2);
                                         }
 
                                         function checkQty() {
                                             var qty = $('#dynamic_fabric_count').val();
-                                            console.log("A dtd é " + qty)
+                                            console.log("A dtd é " + qty);
                                             if (qty % 1 != 0 || isNaN(parseInt(qty))) {
                                                 //if not a number or whole number
                                                 $('#qty_alert').show();
@@ -494,7 +494,7 @@
                                         var flexFabSize = 0;
 
                                         function onClickSelectRadioButton(e, yards_boolean) {
-                                            var total = document.getElementById("total")
+                                            var total = document.getElementById("total");
                                             $("input[name*=swatch]").each(function (index, element) {
                                                 element.value = '';
                                             });
@@ -513,22 +513,21 @@
                                                         fabricId = element.value;
                                                     }
                                                 });
-                                                e.srcElement.value = '1'
-                                                size_finder = "size_" + e.srcElement.id
-                                                size = document.getElementById(size_finder).childNodes[0].data
-                                                yard_test = "" + e.srcElement.id
+                                                e.srcElement.value = '1';
+                                                size_finder = "size_" + e.srcElement.id;
+                                                size = document.getElementById(size_finder).childNodes[0].data;
+                                                yard_test = "" + e.srcElement.id;
                                                 $("input[name*=fabric_size_id]").each(function (index, element) {
                                                     if (element.value == size) {
                                                         element.click()
-                                                    } else if (index == 2 && yard_test == (
-                                                            'dynamic_fabric_yards_' + fabricId)) {
-                                                        flexFabSize = size
+                                                    } else if (index == 2 && yard_test == ('dynamic_fabric_yards_' + fabricId)) {
+                                                        flexFabSize = size;
                                                         element.click()
                                                     }
                                                 });
                                             } else {
-                                                e.target.value = '1'
-                                                flexFabSize = e.target.previousElementSibling.childNodes[0].data
+                                                e.target.value = '1';
+                                                flexFabSize = e.target.previousElementSibling.childNodes[0].data;
                                                 e.target.parentNode.previousElementSibling.click()
                                             }
                                             onKeyUpChangeTotal();
@@ -1033,7 +1032,7 @@
 
                                             var showFabricSizes = function () {
                                                 var fabric;
-                                                console.log("dentro de mostrar tecido")
+                                                console.log("dentro de mostrar tecido");
                                                 $("input[name*=fabric_id]").each(function (index, element) {
                                                     if (element.checked) {
                                                         fabric = element.value;
@@ -1250,11 +1249,11 @@
                                                     $("#fabric_66_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("6458 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("6458 = " + element.value);
                                                         if (6458 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1273,11 +1272,11 @@
                                                     $("#fabric_65_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("5759 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("5759 = " + element.value);
                                                         if (5759 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1296,11 +1295,11 @@
                                                     $("#fabric_63_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("5388 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("5388 = " + element.value);
                                                         if (5388 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1319,11 +1318,11 @@
                                                     $("#fabric_30_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("2100 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("2100 = " + element.value);
                                                         if (2100 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1342,11 +1341,11 @@
                                                     $("#fabric_17_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("1282 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("1282 = " + element.value);
                                                         if (1282 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1365,11 +1364,11 @@
                                                     $("#fabric_43_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("2997 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("2997 = " + element.value);
                                                         if (2997 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1388,11 +1387,11 @@
                                                     $("#fabric_51_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("4032 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("4032 = " + element.value);
                                                         if (4032 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1411,11 +1410,11 @@
                                                     $("#fabric_44_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("3025 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("3025 = " + element.value);
                                                         if (3025 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1434,11 +1433,11 @@
                                                     $("#fabric_59_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("4900 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("4900 = " + element.value);
                                                         if (4900 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1457,11 +1456,11 @@
                                                     $("#fabric_33_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("2407 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("2407 = " + element.value);
                                                         if (2407 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1480,11 +1479,11 @@
                                                     $("#fabric_39_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("2834 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("2834 = " + element.value);
                                                         if (2834 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1503,11 +1502,11 @@
                                                     $("#fabric_47_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("3527 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("3527 = " + element.value);
                                                         if (3527 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1526,11 +1525,11 @@
                                                     $("#fabric_23_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("1857 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("1857 = " + element.value);
                                                         if (1857 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1549,11 +1548,11 @@
                                                     $("#fabric_21_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("1841 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("1841 = " + element.value);
                                                         if (1841 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1572,11 +1571,11 @@
                                                     $("#fabric_67_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("6465 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("6465 = " + element.value);
                                                         if (6465 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1595,11 +1594,11 @@
                                                     $("#fabric_31_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("2189 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("2189 = " + element.value);
                                                         if (2189 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1618,11 +1617,11 @@
                                                     $("#fabric_55_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("4352 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("4352 = " + element.value);
                                                         if (4352 == element.value) {
                                                             console.log("o elemeto é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1641,11 +1640,11 @@
                                                     $("#fabric_56_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("4461 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("4461 = " + element.value);
                                                         if (4461 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1664,11 +1663,11 @@
                                                     $("#fabric_52_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("4101 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("4101 = " + element.value);
                                                         if (4101 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1687,11 +1686,11 @@
                                                     $("#fabric_49_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("3566 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("3566 = " + element.value);
                                                         if (3566 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1710,11 +1709,11 @@
                                                     $("#fabric_48_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("3437 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("3437 = " + element.value);
                                                         if (3437 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1733,11 +1732,11 @@
                                                     $("#fabric_46_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("3355 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("3355 = " + element.value);
                                                         if (3355 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1756,11 +1755,11 @@
                                                     $("#fabric_37_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("2582 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("2582 = " + element.value);
                                                         if (2582 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1778,11 +1777,11 @@
                                                     var element_clicked = false;
                                                     $("#fabric_5_size input").each(function (index, element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("32 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("32 = " + element.value);
                                                         if (32 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1801,11 +1800,11 @@
                                                     $("#fabric_60_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("5263 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("5263 = " + element.value);
                                                         if (5263 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1824,11 +1823,11 @@
                                                     $("#fabric_53_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("4209 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("4209 = " + element.value);
                                                         if (4209 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1847,11 +1846,11 @@
                                                     $("#fabric_50_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("3901 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("3901 = " + element.value);
                                                         if (3901 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1870,11 +1869,11 @@
                                                     $("#fabric_45_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("5266 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("5266 = " + element.value);
                                                         if (5266 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1893,11 +1892,11 @@
                                                     $("#fabric_34_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("2538 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("2538 = " + element.value);
                                                         if (2538 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1916,11 +1915,11 @@
                                                     $("#fabric_32_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("2358 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("2358 = " + element.value);
                                                         if (2358 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1939,11 +1938,11 @@
                                                     $("#fabric_10_size input").each(function (index,
                                                         element) {
                                                         console.log("loop de tamanho interno");
-                                                        console.log("dentro da declaração a não ser")
-                                                        console.log("400 = " + element.value)
+                                                        console.log("dentro da declaração a não ser");
+                                                        console.log("400 = " + element.value);
                                                         if (400 == element.value) {
                                                             console.log("o elemento é " + element);
-                                                            element_clicked = true
+                                                            element_clicked = true;
                                                             element.click();
                                                         }
                                                         if (!element_clicked && element.value == 0) {
@@ -1963,8 +1962,8 @@
                                                 $("input[name*=fabric_id]").each(function (index, element) {
                                                     if (element.checked) {
                                                         fabricId = element.value;
-                                                        console.log("Fabric_id: " + fabricId)
-                                                        fabric_info = "fabric_name_" + fabricId
+                                                        console.log("Fabric_id: " + fabricId);
+                                                        fabric_info = "fabric_name_" + fabricId;
                                                         document.getElementById('fabric_selected').innerHTML =
                                                             document.getElementById(fabric_info).childNodes[
                                                                 0].data
@@ -1974,11 +1973,9 @@
                                                     element) {
                                                     if (element.checked) {
                                                         fabricSizeId = element.value;
-                                                        console.log("fabric_size_" + fabricSizeId +
-                                                            "_" + fabricId)
-                                                        size_info = "fabric_size_" + fabricSizeId +
-                                                            "_" + fabricId
-                                                        size_select = 'size_selected_' + fabricId
+                                                        console.log("fabric_size_" + fabricSizeId + "_" + fabricId);
+                                                        size_info = "fabric_size_" + fabricSizeId + "_" + fabricId;
+                                                        size_select = 'size_selected_' + fabricId;
                                                         document.getElementById(size_select).innerHTML =
                                                             document.getElementById(size_info).childNodes[
                                                                 0].data
@@ -2065,9 +2062,7 @@
                                                 // o elemento de tela que explica 5 jardas é exibido para todos os tamanhos de flex
                                                 fabricHeight = 0;
                                                 if (typeof (fabricSizeId) == "undefined") {
-                                                    console.log(
-                                                        "Tamanho da tela não definido, configuração para o primeiro item"
-                                                    );
+                                                    console.log("Tamanho da tela não definido, configuração para o primeiro item");
                                                     fabricSizeId = 0;
                                                 }
 
@@ -2241,17 +2236,17 @@
                                             }
 
                                             if ((image.width < 4) || (image.height < 4)) {
-                                                console.log("Visualização A imagem é inferior a 4")
+                                                console.log("Visualização A imagem é inferior a 4");
                                                 previewImage.src =
                                                     '/uploadcamisa/{{ Session::get('imageName') }}';
                                             } else if ((image.width > 72) || (image.height > 72)) {
-                                                console.log("Visualizar imagem > de 72")
+                                                console.log("Visualizar imagem > de 72");
                                                 highresImage.src =
                                                     '/uploadcamisa/{{ Session::get('imageName') }}';
                                                 previewImage.src =
                                                     '/uploadcamisa/{{ Session::get('imageName') }}';
                                             } else {
-                                                console.log("4 < vizualização imagem < 72")
+                                                console.log("4 < vizualização imagem < 72");
                                                 previewImage.src =
                                                     '/uploadcamisa/{{ Session::get('imageName') }}';
                                             }
@@ -2324,43 +2319,43 @@
                                                 </script>
                                                 <div style="margin-top: 10px;">
                                                 <h4><strong>Banco de imagens</strong></h4>
-                                                    <img src="images/novas/animais.png" width="55">
-                                                    <img src="images/novas/papu.png" width="55">
-                                                    <img src="images/novas/geometrico.png" width="55">
-                                                    <img src="images/novas/kornit.png" width="55">
-                                                    <img src="images/novas/listras_camufladas.png" width="55">
-                                                    <img src="images/novas/listras_pb.png" width="55">
+                                                    <img src="{{ asset('images/novas/animais.png') }}" width="55">
+                                                    <img src="{{ asset('images/novas/papu.png') }}" width="55">
+                                                    <img src="{{ asset('images/novas/geometrico.png') }}" width="55">
+                                                    <img src="{{ asset('images/novas/kornit.png') }}" width="55">
+                                                    <img src="{{ asset('images/novas/listras_camufladas.png') }}" width="55">
+                                                    <img src="{{ asset('images/novas/listras_pb.png') }}" width="55">
                                                 </div>
                                                 <div id='fabric_options'>
                                                     <!-- <strong>Mudar posição do módulo.</strong> -->
                                                     <div style="margin-top:10px; float:left; font-size: 7px; text-align:center" id="myForm">
                                                         <div style="width:46px; float:left; margin-right: 6px;">
                                                             <a href="#" class="repeat_select" id="repeat_select_basic" name="BASICO">
-                                                                <img alt="Basic_off" src="images/outros/Basic_OFF.png" id="imagem"/>
+                                                                <img alt="Basic_off" src="{{ asset('images/outros/Basic_OFF.png') }}" id="imagem"/>
                                                             </a>
                                                             BASICO
                                                         </div>
                                                         <div style="width:46px; float:left; margin-right: 6px">
                                                             <a href="#" class="repeat_select" id="repeat_select_half" name="VERTICAL">
-                                                                <img alt="Half_off" src="images/outros/Half_OFF.png" id="imagem"/>
+                                                                <img alt="Half_off" src="{{ asset('images/outros/Half_OFF.png') }}" id="imagem"/>
                                                             </a>
                                                             VERTICAL
                                                         </div>
                                                         <div style="width:46px; float:left; margin-right: 6px">
                                                             <a href="#" class="repeat_select" id="repeat_select_brick" name="HORIZONTAL">
-                                                                <img alt="Brick_off" src="images/outros/Brick_OFF.png" id="imagem"/>
+                                                                <img alt="Brick_off" src="{{ asset('images/outros/Brick_OFF.png') }}" id="imagem"/>
                                                             </a>
                                                             HORIZONTAL
                                                         </div>
                                                         <div style="width:46px; float:left; margin-right: 6px">
                                                             <a href="#" class="repeat_select" id="repeat_select_center" name="CENTRO">
-                                                                <img alt="Center_off" src="images/outros/Center_OFF.png" id="imagem"/>
+                                                                <img alt="Center_off" src="{{ asset('images/outros/Center_OFF.png') }}" id="imagem"/>
                                                             </a>
                                                             CENTRO
                                                         </div>
                                                         <div style="width:46px; float:left;">
                                                             <a href="#" class="repeat_select" id="repeat_select_mirror" name="ESPELHADO">
-                                                                <img alt="Mirror_off" src="images/outros/Mirror_OFF.png" id="imagem"/>
+                                                                <img alt="Mirror_off" src="{{ asset('images/outros/Mirror_OFF.png') }}" id="imagem"/>
                                                             </a>
                                                             ESPELHADO
                                                         </div>
@@ -2442,12 +2437,15 @@
                                                 </div>
                                                 <!-- Novos controles de console -->
                                                 <div id="fabric_selector" class="add_to_cart_select">
-                                                    <div id="fabric_header" class="header" onclick="var fabDrop = document.getElementById('fabric_drop_down'); if (fabDrop.style.display != 'block'){fabDrop.style.display = 'block';}else{fabDrop.style.display = 'none';}">
+                                                    <div id="fabric_header" class="header"
+                                                         onclick="var fabDrop = document.getElementById('fabric_drop_down');
+                                                         if (fabDrop.style.display != 'block'){fabDrop.style.display = 'block';}
+                                                         else{fabDrop.style.display = 'none';}">
                                                         <div id="fabric_selected" class="drop_item_selected" style="float:left;">
                                                             <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                         </div>
                                                         <div class="drop_arrow">
-                                                            <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                            <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                         </div>
                                                     </div>
                                                     <div id="fabric_drop_down" class="drop_list">
@@ -2620,7 +2618,7 @@
                                                     </div>
                                                 </div>
                                                 <div id="button_fabric" class="mobile_hide show_help_button">
-                                                    <a onclick="toggle_fabric()"><img alt="Help_icon" src="images/outros/help_icon.png" /></a>
+                                                    <a onclick="toggle_fabric()"><img alt="Help_icon" src="{{ asset('images/outros/help_icon.png') }}" /></a>
                                                 </div>
                                                 <div id='fabric_help' style='display:none;'>
                                                     <div style="background-color: #FAF9F3; padding: 10px; clear: both; margin-top: 4px; margin-bottom: 4px">
@@ -2662,7 +2660,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_66" class="size_drop_down drop_list">
@@ -2703,7 +2701,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_65" class="size_drop_down drop_list">
@@ -2742,7 +2740,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_63" class="size_drop_down drop_list">
@@ -2781,7 +2779,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_30" class="size_drop_down drop_list">
@@ -2820,7 +2818,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_17" class="size_drop_down drop_list">
@@ -2859,7 +2857,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_43" class="size_drop_down drop_list">
@@ -2898,7 +2896,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_51" class="size_drop_down drop_list">
@@ -2937,7 +2935,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_44" class="size_drop_down drop_list">
@@ -2976,7 +2974,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_59" class="size_drop_down drop_list">
@@ -3015,7 +3013,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_33" class="size_drop_down drop_list">
@@ -3054,7 +3052,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_39" class="size_drop_down drop_list">
@@ -3093,7 +3091,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_47" class="size_drop_down drop_list">
@@ -3132,7 +3130,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_23" class="size_drop_down drop_list">
@@ -3171,7 +3169,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_21" class="size_drop_down drop_list">
@@ -3210,7 +3208,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_67" class="size_drop_down drop_list">
@@ -3249,7 +3247,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_31" class="size_drop_down drop_list">
@@ -3288,7 +3286,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_55" class="size_drop_down drop_list">
@@ -3327,7 +3325,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_56" class="size_drop_down drop_list">
@@ -3366,7 +3364,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_52" class="size_drop_down drop_list">
@@ -3405,7 +3403,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_49" class="size_drop_down drop_list">
@@ -3444,7 +3442,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_48" class="size_drop_down drop_list">
@@ -3483,7 +3481,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_46" class="size_drop_down drop_list">
@@ -3522,7 +3520,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_37" class="size_drop_down drop_list">
@@ -3561,7 +3559,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_5" class="size_drop_down drop_list">
@@ -3600,7 +3598,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_60" class="size_drop_down drop_list">
@@ -3639,7 +3637,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_53" class="size_drop_down drop_list">
@@ -3678,7 +3676,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_50" class="size_drop_down drop_list">
@@ -3717,7 +3715,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_45" class="size_drop_down drop_list">
@@ -3756,7 +3754,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_34" class="size_drop_down drop_list">
@@ -3795,7 +3793,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_32" class="size_drop_down drop_list">
@@ -3834,7 +3832,7 @@
                                                                 <!-- Suporte para o tecido selecionado. Será preenchido com javascript -->
                                                             </div>
                                                             <div class="drop_arrow">
-                                                                <img alt="Carrot_brown" id="carrot_tag" src="images/outros/Carrot_Brown.jpg" />
+                                                                <img alt="Carrot_brown" id="carrot_tag" src="{{ asset('images/outros/Carrot_Brown.jpg') }}" />
                                                             </div>
                                                         </div>
                                                         <div id="size_drop_down_10" class="size_drop_down drop_list">
@@ -3870,20 +3868,20 @@
                                                 </div>
                                                 <script type="text/javascript">
                                                     function toggle() {
-                                                        var oDiv = document.getElementById('size_help')
-                                                        var oBtn = document.getElementById('size_button')
+                                                        var oDiv = document.getElementById('size_help');
+                                                        var oBtn = document.getElementById('size_button');
                                                         if (oDiv.style.display == 'none') {
-                                                            oDiv.style.display = 'block'
+                                                            oDiv.style.display = 'block';
                                                             oBtn.value = 'HIDE'
                                                         } else {
-                                                            oDiv.style.display = 'none'
+                                                            oDiv.style.display = 'none';
                                                             oBtn.value = 'SHOW'
                                                         }
                                                     }
                                                 </script>
                                                 <div id="size_button" class="mobile_hide show_help_button">
                                                     <a onclick="toggle()">
-                                                        <img alt="Help_icon" src="images/outros/help_icon.png" /></a>
+                                                        <img alt="Help_icon" src="{{ asset('images/outros/help_icon.png') }}" /></a>
                                                 </div>
                                                 <div id='size_help' style='clear: both;display:none; background-color: #FAF9F3; padding: 10px; margin-top: 40px; margin-bottom: 4px; overflow:hidden'>
                                                     <div style='line-height:1em;font-size:10px; float: right'>
@@ -3936,13 +3934,13 @@
                                 </script>
                                 <script type="text/javascript">
                                     function toggle_fabric() {
-                                        var oDiv = document.getElementById('fabric_help')
-                                        var oBtn = document.getElementById('button_fabric')
+                                        var oDiv = document.getElementById('fabric_help');
+                                        var oBtn = document.getElementById('button_fabric');
                                         if (oDiv.style.display == 'none') {
-                                            oDiv.style.display = 'block'
+                                            oDiv.style.display = 'block';
                                             oBtn.value = 'HIDE'
                                         } else {
-                                            oDiv.style.display = 'none'
+                                            oDiv.style.display = 'none';
                                             oBtn.value = 'SHOW'
                                         }
                                     }
@@ -4063,7 +4061,7 @@
                         </div>
                         <div class="wallpaper_left">
                             <div class="more_wallpaper_info">
-                                <img alt="Measure-wall" src="images/outros/measure-wall.jpg" />
+                                <img alt="Measure-wall" src="{{ asset('images/outros/measure-wall.jpg') }}" />
                                 <ul>
                                     <li>Digite uma parede ou superfície de cada vez</li>
                                     <li>Medir toda a área da parede</li>
@@ -4094,8 +4092,8 @@
                     $("input[name*=fabric_id]").each(function (index, element) {
                         if (element.checked) {
                             fabricId = element.value;
-                            console.log("Fabric_id: " + fabricId)
-                            fabric_info = "fabric_name_" + fabricId
+                            console.log("Fabric_id: " + fabricId);
+                            fabric_info = "fabric_name_" + fabricId;
                             document.getElementById('fabric_selected').innerHTML = document.getElementById(
                                 fabric_info).childNodes[0].data
                         }
@@ -4105,29 +4103,29 @@
 
                 function addHeight() {
                     //increases height of fancy box by 14 px
-                    current_height = $(".fancybox-inner").height()
-                    new_height = current_height + 14
+                    current_height = $(".fancybox-inner").height();
+                    new_height = current_height + 14;
                     $(".fancybox-inner").height(new_height);
                 }
 
                 function decreaseHeight() {
                     //decreases height of fancy box by 28 px
-                    current_height = $(".fancybox-inner").height()
-                    new_height = current_height - 28
+                    current_height = $(".fancybox-inner").height();
+                    new_height = current_height - 28;
                     $(".fancybox-inner").height(new_height);
                 }
 
                 function addWall(div) {
                     //this function adds a new space for a wall
-                    string = div
-                    remove = parseInt(string.replace("div.w", "")) - 1
+                    string = div;
+                    remove = parseInt(string.replace("div.w", "")) - 1;
                     $(div).each(function (i, div) {
                         if ($(div).hasClass('display_none')) {
                             //if the wall isn't currently visible
                             div.classList.toggle('display_none');
                             $(string + " input").focus();
-                            new_div = parseInt(string.replace("div.w", "")) + 1
-                            final_div = "div.w" + new_div
+                            new_div = parseInt(string.replace("div.w", "")) + 1;
+                            final_div = "div.w" + new_div;
                             if (string == "div.w8") {
                                 //if mostrando__ wall 8, remove add wall link
                                 $("a.add_wall_link").each(function (i, a) {
@@ -4141,7 +4139,7 @@
                     });
                     //remove X from previous wall, as long as previous wall isn't first wall
                     if (remove != 1) {
-                        remove_div = "span.remove" + remove
+                        remove_div = "span.remove" + remove;
                         $(remove_div).each(function (i, r) {
                             r.classList.toggle('display_none');
                         });
@@ -4154,14 +4152,14 @@
 
                 function removeWall(div) {
                     //this function removes a wall
-                    string = div
-                    remove = parseInt(string.replace("div.w", "")) - 1
+                    string = div;
+                    remove = parseInt(string.replace("div.w", "")) - 1;
                     $(div).each(function (i, div) {
                         div.classList.toggle('display_none');
                     });
                     //add X to last wall, as long as last wall isn't first wall
                     if (remove != 1) {
-                        remove_div = "span.remove" + remove
+                        remove_div = "span.remove" + remove;
                         $(remove_div).each(function (i, r) {
                             //hide the div
                             r.classList.toggle('display_none');
@@ -4169,8 +4167,8 @@
                     }
 
                     //Makes the input 0 & calls for total to be recalculated
-                    input = 'input#width_' + string.replace("div.w", "")
-                    console.log("this is input: " + input)
+                    input = 'input#width_' + string.replace("div.w", "");
+                    console.log("this is input: " + input);
                     $(input).each(function (i, w) {
                         $(w).val(0);
                         $(w).keyup();
@@ -4188,16 +4186,16 @@
                     //change function to be the previous wall. ie. if mostrando__ 3, change it to show 2
                     console.log("this is div: " + div);
                     $("a.add_wall_link").each(function (i, a) {
-                        console.log("about to change add wall link")
+                        console.log("about to change add wall link");
                         $(a).attr("onclick", "addWall('" + div + "')");
                     });
                 };
 
                 function calcNumberOfRolls(fabricId, total_width) {
-                    console.log("inside number of rolls")
+                    console.log("inside number of rolls");
                     var width = widthOfRoll(fabricId);
-                    console.log("found width of roll is " + width)
-                    var rolls_needed = parseInt(Math.ceil((total_width * 12) / (width * 12)))
+                    console.log("found width of roll is " + width);
+                    var rolls_needed = parseInt(Math.ceil((total_width * 12) / (width * 12)));
                     console.log('Dentro do rolo calc - número de rolos necessários é ' + rolls_needed);
                     return rolls_needed;
                 }
@@ -4207,7 +4205,7 @@
                     var ppf = pricePerFoot(fabricId);
                     var price = roll_count * (ppf * height);
                     console.log("price is " + price + " height is " + height + " roll count is " + roll_count +
-                        " ppf is " + ppf)
+                        " ppf is " + ppf);
 
                     var cost = 0.00;
                     cost = parseFloat(parseFloat(price) * 90) / 100;
@@ -4230,8 +4228,8 @@
                     $("#dynamic_wall_height").val(height);
                     $("#calculator_wall_height").text(height);
                     $("#calculator_roll_quantity").text(roll_count);
-                    var roll_sqft = roll_width * height
-                    console.log("roll sq ft is " + roll_sqft)
+                    var roll_sqft = roll_width * height;
+                    console.log("roll sq ft is " + roll_sqft);
                     $("#calculator_roll_sqft").text(roll_sqft);
                     $("#dynamic_wall_roll_count").val(roll_count);
                 }
@@ -4241,14 +4239,14 @@
                 }
 
                 $(document).ready(function () {
-                    var $inputs = $('input')
-                    var $w_inputs = $('input[name*="width_"]')
+                    var $inputs = $('input');
+                    var $w_inputs = $('input[name*="width_"]');
 
                     $inputs.keyup(function () {
-                        math = 0
-                        var height = $("input.height").eq(1).val()
+                        math = 0;
+                        var height = $("input.height").eq(1).val();
                         if (height === undefined) {
-                            var height = $("input.height").eq(0).val()
+                            var height = $("input.height").eq(0).val();
                             if (height > 15) {
                                 $("input.height").eq(0).val(15);
                                 height = 15
@@ -4276,7 +4274,7 @@
                                 $(p).text("A altura deve ser 15 ou menos.");
                             });
                         } else {
-                            math = sum * height
+                            math = sum * height;
                             $(".total_area").each(function (i, p) {
                                 if (isNaN(math)) {
                                     $(p).text("Por favor, coloque um número.");
@@ -4295,11 +4293,11 @@
                                 a.classList.toggle('disabled_button');
                             }
                         });
-                        console.log("Ficando pronto para definir tecido")
+                        console.log("Ficando pronto para definir tecido");
                         var fabricId = parseInt(setFabricId());
                         if ($("#size_selected_" + fabricId).text() == 'Use a Calculadora de Cobertura') {
                             console.log("Tecido encontrado. Preparando-se para calc rolls. A identificação da tela é " +
-                                fabricId)
+                                fabricId);
                             var roll_count = calcNumberOfRolls(fabricId, sum);
                             var price = updateTotalPrice(fabricId, roll_count, height);
                             updateHiddenFields(height, widthOfRoll(fabricId), roll_count);
@@ -4370,7 +4368,7 @@
             </a>
                 <br/><br/>
                 <a onclick="document.getElementById(&#x27;whole_page&#x27;).style.display = &#x27;block&#x27;; document.getElementById(&#x27;zoom&#x27;).style.display = &#x27;none&#x27;;">
-                    <img alt="papu-2-150" src="/images/outros/papu-2-150_shop_preview.jpg"
+                    <img alt="papu-2-150" src="{{ asset('/images/outros/papu-2-150_shop_preview.jpg') }}"
                         title="click to go back" />
                 </a>
                 <br/><br/>
@@ -4626,10 +4624,10 @@
                     window.location = 'http://www.spoonflower.com/'
                 }
             } else {
-                s = document.getElementById(section + "_ft")
-                cross = document.getElementById(section + "_cross")
-                h = document.getElementById(section + "_header")
-                w = document.getElementById(section + "_header_words")
+                s = document.getElementById(section + "_ft");
+                cross = document.getElementById(section + "_cross");
+                h = document.getElementById(section + "_header");
+                w = document.getElementById(section + "_header_words");
                 if (s.style.display == "none" || s.style.display == "") {
                     s.style.display = "block";
                     cross.innerHTML = "-"
@@ -4643,8 +4641,8 @@
                     w.style.color = "#D9531E";
                 } else {
                     s.style.display = "none";
-                    cross.innerHTML = "+"
-                    cross.style.color = "#968972"
+                    cross.innerHTML = "+";
+                    cross.style.color = "#968972";
                     w.style.color = "#968972"
                     $('#' + section + '_header').css({
                         backgroundColor: 'gray'
