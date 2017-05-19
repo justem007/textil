@@ -5,7 +5,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta property="og:type" content='product' />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rapport de Tecido</title>
     <?php header('Link: <css/rossina.css>; rel=preload; as=style'); ?>
@@ -16,9 +16,9 @@
         <style>
             #imagem{border: 3px solid #CCC;} 
             #imagem:hover{border:2px solid lightseagreen;} 
-        
+            .h1_servicos_tecidos{font-family: Verdana;font-size: 16px}
         </style>
-        <script src="assets/js/rossina.js"></script>
+        <script src="{{ asset('assets/js/rossina.js') }}"></script>
         <script type="text/javascript">
             function goBack() {
                 window.history.back();
@@ -239,6 +239,21 @@
             </div>
         </div>
          Design Info, Canvas area, and Add to Cart for Design page -->
+        <h2 style="text-align: center; color:#069; margin-bottom: 10px;">
+            Serviços Têxteis - Terceirize sua Produção - Sublimação metro corrido
+        </h2>
+        <div class="row">
+            <h1 class="h1_servicos_tecidos">
+                Vendemos somente o papel estampado em Impressão Digital ou Prestamos o Serviço imprimindo qualquer
+                tecido de poliéster com ou sem elastano ou paetê nos padrões abaixo:
+            </h1>
+            <p>Metro corrido (rolos).</p>
+            <p>
+                Desenhos com padronagem ou Full print.
+                Temos dois padrões até 1,50m de largura e acima até 1,76m sem limite de metragem.
+                Produção mínima 10 metros lineares.
+            </p>
+        </div>
         <div id="two" class="white_box" style="float: left; width: 1190px; margin-bottom: 8px; min-height:550px">
             <div class="yui-u first" style="width: 600px; float: left">
                 <div class="yui-gd">

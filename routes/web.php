@@ -138,3 +138,54 @@ Route::post('/pagseguro/notification', [
 Route::get('fancybox', function(){
     return view('fancybox');
 });
+
+Route::get('cloudflare', function(){
+    $zone_identifier = env('API_KEY_CLOUDFLARE');
+
+    $client = new Cloudflare\Api('contato@rossinaestamparia.com.br',env('API_KEY_CLOUDFLARE'));
+
+    $settings = new Cloudflare\Zone\Analytics($client);
+
+    $settings->colos($zone_identifier);
+
+    dd($settings);
+//    $dns = new Cloudflare\Zone\Dns($client);
+    
+//    $dns->create('be4ede5deb333e947aab4a3224d174f9', 'A', 'exemplos.com', '127.1.0.1',120);
+
+//    dd($dns);
+});
+
+Route::get('curl-cloudflare', function(){
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://api.cloudflare.com/client/v4/user");
+//    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+//    curl_setopt($ch, CURLOPT_VERBOSE, 1);
+//    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+
+    $headers = [
+        'X-Auth-Email: contato@rossinaestamparia.com.br',
+        'X-Auth-Key: 4e5def0ef033c8e403f0e4e3e4138150b3dac',
+        'Content-Type: application/json'
+    ];
+
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+//    echo "posting to API<br />";
+    $result = curl_exec($ch);
+    echo $result;
+});
+
+Route::get('guzzlehttp-cloudflare', function(){
+    $request = new \GuzzleHttp\Psr7\Request('GET', 'https://api.cloudflare.com/client/v4/user');
+
+    $headers = [
+        'X-Auth-Email: contato@rossinaestamparia.com.br',
+        'X-Auth-Key: 4e5def0ef033c8e403f0e4e3e4138150b3dac',
+        'Content-Type: application/json'
+    ];
+
+    $request = new \GuzzleHttp\Psr7\Request('GET', 'https://api.cloudflare.com/client/v4/user', $headers);
+    return $headers;
+});

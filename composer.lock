@@ -2756,16 +2756,16 @@
         },
         {
             "name": "laravelcollective/html",
-            "version": "v5.4.3",
+            "version": "v5.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "023efce5fd8057cb3b5ce503f3391cc4effa7caa"
+                "reference": "4b493269d501485d4feb952cb380297290431680"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/023efce5fd8057cb3b5ce503f3391cc4effa7caa",
-                "reference": "023efce5fd8057cb3b5ce503f3391cc4effa7caa",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/4b493269d501485d4feb952cb380297290431680",
+                "reference": "4b493269d501485d4feb952cb380297290431680",
                 "shasum": ""
             },
             "require": {
@@ -2806,7 +2806,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
-            "time": "2017-05-15T09:38:20+00:00"
+            "time": "2017-05-18T05:28:33+00:00"
         },
         {
             "name": "laravelcollective/remote",
@@ -7739,16 +7739,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "11e7710b7724d42c62249b0e9d3030240398949d"
+                "reference": "02b6b2c7aefe2cdb1185b8dbf8718b0bcedf3ab3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/11e7710b7724d42c62249b0e9d3030240398949d",
-                "reference": "11e7710b7724d42c62249b0e9d3030240398949d",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/02b6b2c7aefe2cdb1185b8dbf8718b0bcedf3ab3",
+                "reference": "02b6b2c7aefe2cdb1185b8dbf8718b0bcedf3ab3",
                 "shasum": ""
             },
             "require": {
@@ -7785,7 +7785,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2017-04-21T14:40:32+00:00"
+            "time": "2017-05-18T10:10:00+00:00"
         },
         {
             "name": "sebastian/exporter",
