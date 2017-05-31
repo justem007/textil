@@ -7,6 +7,8 @@
     "require": {
         "php": ">=5.6.4",
         "algolia/algoliasearch-client-php": "^1.14",
+        "algolia/algoliasearch-laravel": "^1.7",
+        "aws/aws-sdk-php": "^3.28",
         "barryvdh/laravel-cors": "^0.8.6",
         "cagartner/correios-consulta": "^0.1.4",
         "consoletvs/charts": "^4.2",
@@ -48,6 +50,7 @@
         "santigraviano/laravel-mercadopago": "^1.0",
         "setasign/fpdf": "^1.8",
         "setasign/fpdi": "^1.6",
+        "spatie/flysystem-dropbox": "^1.0",
         "spatie/googlesearch": "^2.0",
         "spatie/laravel-fractal": "^3.5",
         "spatie/laravel-google-calendar": "^1.0",

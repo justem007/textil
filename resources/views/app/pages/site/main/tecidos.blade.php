@@ -192,7 +192,7 @@
                   if (yOffset < currYOffSet) {
                       myNavBar.add();
                   }
-                  else if (currYOffSet == yOffset) {
+                  else if (currYOffSet === yOffset) {
                       myNavBar.remove();
                   }
 
@@ -200,7 +200,7 @@
 
               window.onscroll = function (e) {
                   offSetManager();
-              }
+              };
 
               offSetManager();
 

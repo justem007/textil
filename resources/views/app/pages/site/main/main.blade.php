@@ -68,11 +68,9 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Serviços</a></li>
-                        <li><a href="/tecidos">Tecidos</a></li>
-                        <li><a href="#contact">Camisas</a></li>
+                        <li class="active"><a href="/servicos">Serviços</a></li>
                         <li><a href="/agendamentos">Agendamentos</a></li>
-                        <li><a href="#contact">Faqs</a></li>
+                        <li><a href="/faq">Faq</a></li>
                         <li><a href="/contatos">Contatos</a></li>
                     </ul>
                 </div><!-- /.nav-collapse -->
@@ -82,17 +80,6 @@
     <div class="container-fluid">
         @yield('container-fluid')
     </div>
-        {{--<div class="container">--}}
-        {{--<div id="disqus_thread"></div>--}}
-        {{--<script>--}}
-        {{--(function() { // DON'T EDIT BELOW THIS LINE--}}
-        {{--var d = document, s = d.createElement('script');--}}
-        {{--s.src = 'https://https-rossinaestamparia-com-br.disqus.com/embed.js';--}}
-        {{--s.setAttribute('data-timestamp', +new Date());--}}
-        {{--(d.head || d.body).appendChild(s);--}}
-        {{--})();--}}
-        {{--</script>--}}
-        {{--</div>--}}
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     @section('footer-section')
             <div class="alert-consumidor" style="margin-top: 20px">
@@ -158,7 +145,6 @@
     @show
     @section('javascript-includes')
         <script src="{{ asset('js/app.js') }}"></script>
-        {{--<script src="https://unpkg.com/vue/dist/vue.js"></script>--}}
     @show
 </body>
 </html>
