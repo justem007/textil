@@ -38,7 +38,7 @@ class ServicoSilkDigitalDtgKornitsController extends Controller
      */
     public function getIndex()
     {
-
+        return view('app.pages.site.main.silk-digital-dtg-kornit');
     }
 
     /**

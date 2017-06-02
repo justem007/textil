@@ -38,7 +38,7 @@ class ServicoWebLogisticasController extends Controller
      */
     public function getIndex()
     {
-
+        return view('app.pages.site.main.web-logistica');
     }
 
     /**

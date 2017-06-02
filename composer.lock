@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "abraham/twitteroauth",
-            "version": "0.7.2",
+            "version": "0.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/abraham/twitteroauth.git",
-                "reference": "119d5a83478a2d21c09cd27980ab67eba11c8fe1"
+                "reference": "78ece83edd58933ec0a5b5aad906a1d34a694634"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/119d5a83478a2d21c09cd27980ab67eba11c8fe1",
-                "reference": "119d5a83478a2d21c09cd27980ab67eba11c8fe1",
+                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/78ece83edd58933ec0a5b5aad906a1d34a694634",
+                "reference": "78ece83edd58933ec0a5b5aad906a1d34a694634",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "social",
                 "twitter"
             ],
-            "time": "2016-12-12T17:42:13+00:00"
+            "time": "2017-06-01T00:28:10+00:00"
         },
         {
             "name": "algolia/algoliasearch-client-php",
@@ -160,16 +160,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.28.5",
+            "version": "3.28.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c0dfbcb1111104bbb970447484910611a4305b76"
+                "reference": "9c33b9dff5848adc25199f88487b1927edcfe074"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c0dfbcb1111104bbb970447484910611a4305b76",
-                "reference": "c0dfbcb1111104bbb970447484910611a4305b76",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9c33b9dff5848adc25199f88487b1927edcfe074",
+                "reference": "9c33b9dff5848adc25199f88487b1927edcfe074",
                 "shasum": ""
             },
             "require": {
@@ -236,7 +236,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-05-30T21:16:11+00:00"
+            "time": "2017-05-31T19:00:01+00:00"
         },
         {
             "name": "barryvdh/laravel-cors",
@@ -2656,16 +2656,16 @@
         },
         {
             "name": "laravel/scout",
-            "version": "v3.0.4",
+            "version": "v3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/scout.git",
-                "reference": "c822eaff08929439879407ffa27de7966f3c5926"
+                "reference": "547ff55530a16e31b3b1142dd4dfdb654ad2bae0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/scout/zipball/c822eaff08929439879407ffa27de7966f3c5926",
-                "reference": "c822eaff08929439879407ffa27de7966f3c5926",
+                "url": "https://api.github.com/repos/laravel/scout/zipball/547ff55530a16e31b3b1142dd4dfdb654ad2bae0",
+                "reference": "547ff55530a16e31b3b1142dd4dfdb654ad2bae0",
                 "shasum": ""
             },
             "require": {
@@ -2712,7 +2712,7 @@
                 "laravel",
                 "search"
             ],
-            "time": "2017-05-09T12:31:27+00:00"
+            "time": "2017-06-01T13:21:09+00:00"
         },
         {
             "name": "laravel/socialite",
@@ -2770,16 +2770,16 @@
         },
         {
             "name": "laravel/tinker",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/tinker.git",
-                "reference": "3d5b675b55b24ccbf86395964042dbe061d5a965"
+                "reference": "7eb2e281395131897407285672ef5532e87e17f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/tinker/zipball/3d5b675b55b24ccbf86395964042dbe061d5a965",
-                "reference": "3d5b675b55b24ccbf86395964042dbe061d5a965",
+                "url": "https://api.github.com/repos/laravel/tinker/zipball/7eb2e281395131897407285672ef5532e87e17f9",
+                "reference": "7eb2e281395131897407285672ef5532e87e17f9",
                 "shasum": ""
             },
             "require": {
@@ -2800,6 +2800,11 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Tinker\\TinkerServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -2824,7 +2829,7 @@
                 "laravel",
                 "psysh"
             ],
-            "time": "2016-12-30T18:13:17+00:00"
+            "time": "2017-06-01T16:31:26+00:00"
         },
         {
             "name": "laravelcollective/annotations",

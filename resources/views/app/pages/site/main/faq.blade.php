@@ -5,11 +5,11 @@
 
 @extends('app.pages.site.main.main')
 
-@section('title', 'Seu título aqui')
+@section('title', 'Faq Rossina Estamparia')
 
 @section('container-fluid')
 
-    <h1 class="text-center">Seu título aqui</h1>
+    <h1 class="text-center" style="font-size: 30px; font-weight: 300;">Faq Rossina Estamparia - Tire suas dúvidas</h1>
 
     <div class="row">
 

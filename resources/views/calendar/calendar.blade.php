@@ -19,7 +19,7 @@
     <![endif]-->
 </head>
 <body>
-<h1 class="text-center">Calendario de Agendamento</h1>
+<h1 class="text-center" style="font-size: 26px; font-weight: 300">Calendario de Agendamento</h1>
 <div class="container">
     <div class="info" data-dismiss="alert" aria-label="Close"></div>
     <div id='calendar'></div>

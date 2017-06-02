@@ -10,8 +10,8 @@ use Prettus\Validator\Exceptions\ValidatorException;
 use Textil\Http\Requests\FaqCreateRequest;
 use Textil\Http\Requests\FaqUpdateRequest;
 use Textil\Repositories\FaqRepository;
+use Textil\Repositories\FaqRepositoryEloquent;
 use Textil\Validators\FaqValidator;
-
 
 class FaqsController extends Controller
 {
@@ -26,12 +26,16 @@ class FaqsController extends Controller
      */
     protected $validator;
 
-    public function __construct(FaqRepository $repository, FaqValidator $validator)
+    public function __construct(FaqRepositoryEloquent $repository, FaqValidator $validator)
     {
         $this->repository = $repository;
         $this->validator  = $validator;
     }
 
+    public function getIndex()
+    {
+        return view('app.pages.site.main.faq');
+    }
 
     /**
      * Display a listing of the resource.
@@ -70,7 +74,7 @@ class FaqsController extends Controller
             $faq = $this->repository->create($request->all());
 
             $response = [
-                'message' => 'Faq created.',
+                'message' => 'Faq criado.',
                 'data'    => $faq->toArray(),
             ];
 

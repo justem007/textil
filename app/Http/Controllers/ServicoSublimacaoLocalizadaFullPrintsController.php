@@ -38,7 +38,7 @@ class ServicoSublimacaoLocalizadaFullPrintsController extends Controller
      */
     public function getIndex()
     {
-
+        return view('app.pages.site.main.sublimacao-localizada-full-print');
     }
 
     /**

@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-12">
                         <h1 class="h1">
-                            Contacte-nos
+                            Contate-nos
                             <small>Sinta-se livre para contactar-nos</small>
                         </h1>
                     </div>

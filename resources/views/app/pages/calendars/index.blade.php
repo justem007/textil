@@ -9,7 +9,7 @@
 
 @section('container-fluid')
 
-<h1 class="text-center">Calendario de Agendamento</h1>
+<h1 class="text-center" style="font-size: 28px; font-weight: 300">Calendario de Agendamento</h1>
     <div class="container">
         @forelse($calendar as $calenda)
             <div class="col-md-12">

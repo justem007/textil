@@ -5,11 +5,11 @@
 
 @extends('app.pages.site.main.main')
 
-@section('title', 'Seu título aqui')
+@section('title', 'Sublimação Localizada - Full Print - Total Frente')
 
 @section('container-fluid')
 
-    <h1 class="text-center">Seu título aqui</h1>
+    <h1 class="text-center" style="font-size: 30px; font-weight: 300;">Sublimação Localizada - Full Print - Total Frente</h1>
 
     <div class="row">
 
