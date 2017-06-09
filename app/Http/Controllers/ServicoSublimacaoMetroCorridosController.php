@@ -2,8 +2,10 @@
 
 namespace Textil\Http\Controllers;
 
+use DateTimeZone;
 use Illuminate\Http\Request;
 
+use Jenssegers\Date\Date;
 use Textil\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
@@ -38,7 +40,15 @@ class ServicoSublimacaoMetroCorridosController extends Controller
      */
     public function getIndex()
     {
-        return view ('app.pages.site.main.sublimacao-metro-corrido');
+        Date::setLocale('pt-BR');
+
+        $timezone = new DateTimeZone('America/Sao_Paulo');
+
+        $date = Date::now($timezone)->format('l j F Y H:i:s');
+
+        $nome = 'Ricardo';
+
+        return view('app.pages.site.main.sublimacao-metro-corrido', ['date' => $date, 'nome' => $nome]);
     }
 
     /**

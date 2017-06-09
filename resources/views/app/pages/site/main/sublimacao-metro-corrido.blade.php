@@ -1,6 +1,7 @@
 @section('styles-includes')
     @parent
-
+    {{--<script type="text/javascript" src="https://stc.pagseguro.uol.com.br/3rdparty/rm/clicklogger_namespace.1495659913733.js"></script>--}}
+    {{--<script type="text/javascript">UOLRM.check(32);</script>--}}
 @endsection
 
 @extends('app.pages.site.main.main')
@@ -26,6 +27,12 @@
                 Produção mínima 10 metros lineares.
             </div>
         </div>
+        {{ $date }}<br>
+        @if( $nome == 'Ricardo')
+            Os dados estão corretos
+        @else
+            Os dados não estão corretos
+        @endif
         <div class="row">
             <div class="modal fade" id="modal-mensagem">
                 <div class="modal-dialog">
@@ -48,12 +55,11 @@
         </div>
         <div class="row">
             <button class="btn btn-primary" data-toggle="modal" data-target="#modal-mensagem">Exibir cálculo de frete</button>
-            <!-- INICIO CODIGO PAGSEGURO -->
-            <a href="https://pagseguro.uol.com.br/desenvolvedor/simulador_de_frete.jhtml?CepOrigem=24722070&Peso=0.300&Valor=69,90#rmcl" id="ps_freight_simulator" target="InlineFrame1">
-                <img src="https://p.simg.uol.com.br/out/pagseguro/i/user/imgCalculoFrete.gif" id="imgCalculoFrete" alt="Cálculo automático de frete" border="0" />
-            </a>
-            <script type="text/javascript" src="https://p.simg.uol.com.br/out/pagseguro/j/simulador_de_frete.js"></script>
-            <!-- FINAL CODIGO PAGSEGURO -->
+            <br><br>
+            <div class="row">
+                <img src="https://photos-5.dropbox.com/t/2/AABMzMBnIRjMAOHEzD69DmSsTg76LM4ylBOFkCQ6OgdAJA/12/673388052/png/32x32/1/_/1/2/babette-pattern.png/EL_L1cAFGHwgBygH/ruGbPg-1vaOC6EQJaPuhdE4rEL1w8T3uuftaeQWDhrU?size=1600x1200&size_mode=3" width="300" alt="">
+                {!! app('captcha')->render(); !!}
+            </div>
         </div>
     </div>
 

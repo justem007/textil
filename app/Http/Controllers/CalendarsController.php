@@ -48,7 +48,6 @@ class CalendarsController extends Controller
         $this->pessoa = $pessoa;
     }
 
-
     /**
      * Display a listing of the resource.
      *

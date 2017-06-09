@@ -17,7 +17,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'servicos'], function (){
     Route::get('',['as' => 'servicos', 'uses' => 'ServicosController@getIndex']);
     Route::get('sublimacao-metro-corrido', 'ServicoSublimacaoMetroCorridosController@getIndex');
-    Route::get('sublimacao-localizado-frente-total-full-print', 'ServicoSublimacaoLocalizadaFullPrintsController@getIndex');
+    Route::get('sublimacao-localizado-total-frente-full-print', 'ServicoSublimacaoLocalizadaFullPrintsController@getIndex');
     Route::get('silk-digital-dtg-kornit', 'ServicoSilkDigitalDtgKornitsController@getIndex');
     Route::get('web-logistica', 'ServicoWebLogisticasController@getIndex');
 });
