@@ -173,3 +173,5 @@ Route::get('curl-cloudflare', function(){
     $result = curl_exec($ch);
     echo $result;
 });
+
+Route::get('jsonld', 'JsonLDController@jsonLD');

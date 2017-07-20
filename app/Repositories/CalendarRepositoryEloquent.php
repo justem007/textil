@@ -2,10 +2,11 @@
 
 namespace Textil\Repositories;
 
+use Calendar;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Textil\Repositories\CalendarRepository;
-use Textil\Entities\Calendar;
+use Textil\Entities\Calendars;
 use Textil\Validators\CalendarValidator;
 
 /**
@@ -21,7 +22,7 @@ class CalendarRepositoryEloquent extends BaseRepository implements CalendarRepos
      */
     public function model()
     {
-        return Calendar::class;
+        return Calendars::class;
     }
 
     /**

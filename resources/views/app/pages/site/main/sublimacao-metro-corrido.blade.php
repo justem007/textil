@@ -61,44 +61,8 @@
                 {!! app('captcha')->render(); !!}
             </div>
         </div>
-        {{--Utilizando o Schema.Org--}}
-    <div class="row" itemscope itemtype="http://schema.org/Service">
-        <meta itemprop="serviceType" content="Home cleaning" />
-        <span itemprop="provider" itemscope itemtype="http://schema.org/LocalBusiness">
-            <span itemprop="name">Rossina Estamparia Digital</span>
-        </span><br>
-            Serviços de sublimação em tecidos a base de poliéster, silk digital DTG - Kornit e Web-Logística
-        <br>
-        <span itemprop="areaServed" itemscope itemtype="http://schema.org/State">
-            <span itemprop="name">Rio de Janeiro</span>, incluindo
-        </span>
-        <ul itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog">
-            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
-                <span itemprop="name">Oferecemos os serviços de estamparia digital</span>
-                <ul itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
-                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                        <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                            <span itemprop="name">Sublimação Metro Corrido</span>
-                        </div>
-                    </li>
-                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                        <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                            <span itemprop="name">Sublimação Localizada ou Frente Total - Full Print</span>
-                        </div>
-                    </li>
-                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                        <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                            <span itemprop="name">Silk Digital DTG</span>
-                        </div>
-                    </li>
-                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                        <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                            <span itemprop="name">Web-Logística</span>
-                        </div>
-                    </li>
-                </ul>
-            </ul>
-        </div>
+        {{--Dados Estruturados - Retorno--}}
+        {!! $context !!}
     </div>
 @section('footer-section')
     @parent

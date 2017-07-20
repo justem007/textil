@@ -6,6 +6,7 @@ use DateTimeZone;
 use Illuminate\Http\Request;
 
 use Jenssegers\Date\Date;
+use JsonLd\Context as JsonLd;
 use Textil\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
@@ -40,6 +41,23 @@ class ServicoSublimacaoMetroCorridosController extends Controller
      */
     public function getIndex()
     {
+        $context = JsonLd::create('local_business',[
+            'name' => 'Rossina Estamparia',
+            'description' => 'Serviços de sublimação metro corrido, sublimação localizado, frente total, full print, silk digital DTG, web-logística',
+            'telephone' => '21-2602-7536',
+            'openingHours' => 'segunda-feira, terça-feira, quarta-feira, quinta-feira, sexta-feira',
+            'address' => [
+                'streetAddress' => 'AVENIDA PRESIDENTE ROOSEVELT, 130 PARTE',
+                'addressLocality' => 'Vista Alegre, São Gonçalo',
+                'addressRegion' => 'Rio de Janeiro',
+                'postalCode' => '24722-070',
+            ],
+            'geo' => [
+                'latitude' => '-22.805951',
+                'longitude' => '-42.968565',
+            ],
+        ]);
+
         Date::setLocale('pt-BR');
 
         $timezone = new DateTimeZone('America/Sao_Paulo');
@@ -48,7 +66,7 @@ class ServicoSublimacaoMetroCorridosController extends Controller
 
         $nome = 'Ricardo';
 
-        return view('app.pages.site.main.sublimacao-metro-corrido', ['date' => $date, 'nome' => $nome]);
+        return view('app.pages.site.main.sublimacao-metro-corrido', ['date' => $date, 'nome' => $nome, 'context' => $context]);
     }
 
     /**

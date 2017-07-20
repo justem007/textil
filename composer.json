@@ -27,6 +27,7 @@
         "jenssegers/date": "^3.2",
         "jenssegers/mongodb": "^3.2",
         "laracademy/generators": "^1.3",
+        "laracasts/presenter": "^0.2.1",
         "laravel-notification-channels/telegram": "^0.0.1",
         "laravel-notification-channels/twitter": "^1.0",
         "laravel/cashier": "^7.0",
@@ -61,6 +62,7 @@
         "symfony/css-selector": "^3.2",
         "symfony/dom-crawler": "^3.2",
         "themsaid/laravel-langman-gui": "^0.2.0",
+        "torann/json-ld": "^0.0.9",
         "vinkla/algolia": "^2.5"
     },
     "require-dev": {
@@ -76,7 +78,8 @@
             "database"
         ],
         "psr-4": {
-            "Textil\\": "app/"
+            "Textil\\": "app/",
+            "JsonLd\\Classes\\": "app/JsonLd/Classes"
         }
     },
     "autoload-dev": {
