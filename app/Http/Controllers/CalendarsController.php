@@ -15,10 +15,8 @@ use Textil\Repositories\HorariosRepositoryEloquent;
 use Textil\Repositories\PessoasRepositoryEloquent;
 use Textil\Validators\CalendarsValidator;
 
-
 class CalendarsController extends Controller
 {
-
     /**
      * @var CalendarsRepository
      */
@@ -39,13 +37,29 @@ class CalendarsController extends Controller
      */
     protected $pessoa;
 
+    /**
+     * CalendarsController constructor.
+     * @param CalendarsRepositoryEloquent $calendar
+     * @param CalendarsValidator $validator
+     * @param HorariosRepositoryEloquent $horario
+     * @param PessoasRepositoryEloquent $pessoa
+     */
     public function __construct(CalendarsRepositoryEloquent $calendar, CalendarsValidator $validator,
-                                HorariosRepositoryEloquent $horario,  PessoasRepositoryEloquent $pessoa)
+                                HorariosRepositoryEloquent $horario, PessoasRepositoryEloquent $pessoa)
     {
         $this->calendar = $calendar;
         $this->validator  = $validator;
         $this->horario = $horario;
         $this->pessoa = $pessoa;
+    }
+
+    public function teste()
+    {
+        $retorno = $this->calendar->all();
+
+        $find = $this->calendar->find(14);
+
+        return $find;
     }
 
     /**

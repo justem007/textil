@@ -1,5 +1,12 @@
 <?php
 
+use PhpSigep\Bootstrap;
+use PhpSigep\Model\Dimensao;
+use PhpSigep\Model\CalcPrecoPrazo;
+use PhpSigep\Model\AccessDataHomologacao;
+use PhpSigep\Model\ServicoDePostagem;
+use PhpSigep\Services\SoapClient\Real;
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -7,6 +14,52 @@ Route::get('/home', 'HomeController@index');
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Route::get('teste', 'CalendarsController@teste');
+
+Route::get('consulta', function(){
+
+    $accessDataParaAmbienteDeHomologacao = new AccessDataHomologacao();
+
+    $config = new \PhpSigep\Config();
+    $config->setAccessData($accessDataParaAmbienteDeHomologacao);
+    $config->setEnv(\PhpSigep\Config::ENV_DEVELOPMENT);
+    $config->setCacheOptions(
+        array(
+            'storageOptions' => array(
+                // Qualquer valor setado neste atributo será mesclado ao atributos das classes
+                // "\PhpSigep\Cache\Storage\Adapter\AdapterOptions" e "\PhpSigep\Cache\Storage\Adapter\FileSystemOptions".
+                // Por tanto as chaves devem ser o nome de um dos atributos dessas classes.
+                'enabled' => false,
+                'ttl' => 20,// "time to live" de 10 segundos
+                'cacheDir' => sys_get_temp_dir(), // Opcional. Quando não inforado é usado o valor retornado de "sys_get_temp_dir()"
+            ),
+        )
+    );
+
+    Bootstrap::start($config);
+
+    $dimensao = new Dimensao;
+    $dimensao->setTipo(Dimensao::TIPO_PACOTE_CAIXA);
+    $dimensao->setAltura(15); //em centimetros
+    $dimensao->setComprimento(17); // em centimetros
+    $dimensao->setLargura(12); // em centimetros
+
+    $params = new CalcPrecoPrazo();
+    $params->setAccessData(new AccessDataHomologacao);
+    $params->setCepOrigem(24743-020);
+    $params->setCepOrigem(24722-070);
+    $params->setServicosPostagem(ServicoDePostagem::getAll());
+    $params->setAjustarDimensaoMinima(true);
+    $params->setDimensao($dimensao);
+    $params->setPeso(0.500); //500 gramas
+
+    $phpSigep = new Real;
+    $result = $phpSigep->calcPrecoPrazo($params);
+
+    var_dump((array)$result);
+});
+
 
 Route::get('resizeImageTecidos', 'TecidosController@resizeImage');
 Route::post('resizeImageTecidoPost', ['as' => 'resizeImageTecidoPost', 'uses' => 'TecidosController@resizeImagePost']);
